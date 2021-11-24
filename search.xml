@@ -28,6 +28,51 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo配置</title>
+    <url>/2021/10/11/c916c0138e93/</url>
+    <content><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><ol>
+<li>Hexo是一个Node应用，Hexo通过Node的各种库，将.md文件生成静态网站。</li>
+<li>gitHub支持静态文件页面展示，因此Hexo生成的静态文件可以直接放到github中</li>
+<li>Next是Hexo的一个主题，有丰富的功能可配置。</li>
+</ol>
+<h2 id="本地生效，服务器不生效"><a href="#本地生效，服务器不生效" class="headerlink" title="本地生效，服务器不生效"></a>本地生效，服务器不生效</h2><p>需要先清空、生成新的静态文件、再部署</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo cl</span><br><span class="line">hexo gen</span><br><span class="line">hexo dep</span><br></pre></td></tr></table></figure>
+
+<h2 id="主题-Next"><a href="#主题-Next" class="headerlink" title="主题 Next"></a>主题 Next</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+
+<p>./_config.yml</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">theme: landscape</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="常用配置"><a href="#常用配置" class="headerlink" title="常用配置"></a>常用配置</h2><p>搜索库支持、置顶支持</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br><span class="line"></span><br><span class="line">npm uninstall hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="搜索库"><a href="#搜索库" class="headerlink" title="搜索库"></a>搜索库</h3><p>./_config.yml</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
+
+<p>./themes/next/_config.yml</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">local_search:</span><br><span class="line">    enable: true</span><br></pre></td></tr></table></figure>
+
+<h3 id="置顶"><a href="#置顶" class="headerlink" title="置顶"></a>置顶</h3><p>./source/post/xx.md</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">top: 1 // 数字越大越靠前</span><br></pre></td></tr></table></figure>
+
+<h3 id="文件中文名字问题"><a href="#文件中文名字问题" class="headerlink" title="文件中文名字问题"></a>文件中文名字问题</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">permalink: :year/:month/:day/:title/ </span><br><span class="line">改成--&gt;</span><br><span class="line">permalink: :year/:month/:day/:hash/</span><br></pre></td></tr></table></figure>
+
+<h3 id="添加-tags和-categorys"><a href="#添加-tags和-categorys" class="headerlink" title="添加 tags和 categorys"></a>添加 <code>tags</code>和 <code>categorys</code></h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new page tags</span><br><span class="line">hexo new page categorys</span><br></pre></td></tr></table></figure>
+
+<p>修改文件</p>
+<img src="image-20210515233922673.png" alt="image-20210515233922673" style="zoom:67%;" />
+
+<h3 id="添加图片"><a href="#添加图片" class="headerlink" title="添加图片"></a>添加图片</h3><p>使用 typora 插入图片，并设置路径如下</p>
+<p><img src="image-20210515234102349.png" alt="image-20210515234102349"></p>
+<p>写完后，将『当前文件名/』 删除即可完成图片添加。 </p>
+]]></content>
+      <tags>
+        <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>手机CPU天梯图</title>
     <url>/2021/10/11/3b15911d429b/</url>
     <content><![CDATA[<p>近期有换手机需求，仅供参考。</p>
@@ -171,51 +216,6 @@
 ]]></content>
       <tags>
         <tag>硬件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo配置</title>
-    <url>/2021/10/11/c916c0138e93/</url>
-    <content><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><ol>
-<li>Hexo是一个Node应用，Hexo通过Node的各种库，将.md文件生成静态网站。</li>
-<li>gitHub支持静态文件页面展示，因此Hexo生成的静态文件可以直接放到github中</li>
-<li>Next是Hexo的一个主题，有丰富的功能可配置。</li>
-</ol>
-<h2 id="本地生效，服务器不生效"><a href="#本地生效，服务器不生效" class="headerlink" title="本地生效，服务器不生效"></a>本地生效，服务器不生效</h2><p>需要先清空、生成新的静态文件、再部署</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo cl</span><br><span class="line">hexo gen</span><br><span class="line">hexo dep</span><br></pre></td></tr></table></figure>
-
-<h2 id="主题-Next"><a href="#主题-Next" class="headerlink" title="主题 Next"></a>主题 Next</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-
-<p>./_config.yml</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">theme: landscape</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="常用配置"><a href="#常用配置" class="headerlink" title="常用配置"></a>常用配置</h2><p>搜索库支持、置顶支持</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br><span class="line"></span><br><span class="line">npm uninstall hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
-
-<h3 id="搜索库"><a href="#搜索库" class="headerlink" title="搜索库"></a>搜索库</h3><p>./_config.yml</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
-
-<p>./themes/next/_config.yml</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">local_search:</span><br><span class="line">    enable: true</span><br></pre></td></tr></table></figure>
-
-<h3 id="置顶"><a href="#置顶" class="headerlink" title="置顶"></a>置顶</h3><p>./source/post/xx.md</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">top: 1 // 数字越大越靠前</span><br></pre></td></tr></table></figure>
-
-<h3 id="文件中文名字问题"><a href="#文件中文名字问题" class="headerlink" title="文件中文名字问题"></a>文件中文名字问题</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">permalink: :year/:month/:day/:title/ </span><br><span class="line">改成--&gt;</span><br><span class="line">permalink: :year/:month/:day/:hash/</span><br></pre></td></tr></table></figure>
-
-<h3 id="添加-tags和-categorys"><a href="#添加-tags和-categorys" class="headerlink" title="添加 tags和 categorys"></a>添加 <code>tags</code>和 <code>categorys</code></h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new page tags</span><br><span class="line">hexo new page categorys</span><br></pre></td></tr></table></figure>
-
-<p>修改文件</p>
-<img src="image-20210515233922673.png" alt="image-20210515233922673" style="zoom:67%;" />
-
-<h3 id="添加图片"><a href="#添加图片" class="headerlink" title="添加图片"></a>添加图片</h3><p>使用 typora 插入图片，并设置路径如下</p>
-<p><img src="image-20210515234102349.png" alt="image-20210515234102349"></p>
-<p>写完后，将『当前文件名/』 删除即可完成图片添加。 </p>
-]]></content>
-      <tags>
-        <tag>工具</tag>
       </tags>
   </entry>
   <entry>
