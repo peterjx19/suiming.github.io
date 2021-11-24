@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>APP技术设计小结</title>
+    <url>/2021/10/11/1bcd4ad1a20b/</url>
+    <content><![CDATA[<p>近期做APP的技术方案，需要和WEB端协同上线，踩了一些坑。记录如下</p>
+<h2 id="沟通"><a href="#沟通" class="headerlink" title="沟通"></a>沟通</h2><ul>
+<li><p>背景沟通：项目启动拉通各业务线产品、开发，介绍大家认识；讲解项目背景；达成一致的远景。</p>
+</li>
+<li><p>面对面沟通：对技术方案过程中，有条件就面对面，没有条件也尽量语音沟通，效率会更高</p>
+</li>
+<li><p>沟通结果输出：沟通后，通过书面输出沟通结果，并确认。</p>
+</li>
+<li><p>二次确认沟通：实际进入开发后，己方开发提出的许多疑问，统一和对方开发面对面沟通，以降低打扰和提高效率。</p>
+</li>
+<li><p>输出结果质量看护：输出UML流程和泳道图，有利于识别不清晰的内容；使用填表格的方式确保没有遗漏项</p>
+</li>
+</ul>
+<h2 id="技术方案设计"><a href="#技术方案设计" class="headerlink" title="技术方案设计"></a>技术方案设计</h2><ul>
+<li><p>APP新老兼容问题：老APP访问新服务，是否会有问题，如何解决。（期间有个三级线上问题）</p>
+</li>
+<li><p>细节实现决定能否支撑业务： 对接业务流程接口，不仅要确保流程能否走通，也要看接口的细节，入参、出参是否满足业务流程。（踩过坑）</p>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>总结</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>手机CPU天梯图</title>
     <url>/2021/10/11/3b15911d429b/</url>
     <content><![CDATA[<p>近期有换手机需求，仅供参考。</p>
@@ -147,33 +174,6 @@
       </tags>
   </entry>
   <entry>
-    <title>APP技术设计小结</title>
-    <url>/2021/10/11/1bcd4ad1a20b/</url>
-    <content><![CDATA[<p>近期做APP的技术方案，需要和WEB端协同上线，踩了一些坑。记录如下</p>
-<h2 id="沟通"><a href="#沟通" class="headerlink" title="沟通"></a>沟通</h2><ul>
-<li><p>背景沟通：项目启动拉通各业务线产品、开发，介绍大家认识；讲解项目背景；达成一致的远景。</p>
-</li>
-<li><p>面对面沟通：对技术方案过程中，有条件就面对面，没有条件也尽量语音沟通，效率会更高</p>
-</li>
-<li><p>沟通结果输出：沟通后，通过书面输出沟通结果，并确认。</p>
-</li>
-<li><p>二次确认沟通：实际进入开发后，己方开发提出的许多疑问，统一和对方开发面对面沟通，以降低打扰和提高效率。</p>
-</li>
-<li><p>输出结果质量看护：输出UML流程和泳道图，有利于识别不清晰的内容；使用填表格的方式确保没有遗漏项</p>
-</li>
-</ul>
-<h2 id="技术方案设计"><a href="#技术方案设计" class="headerlink" title="技术方案设计"></a>技术方案设计</h2><ul>
-<li><p>APP新老兼容问题：老APP访问新服务，是否会有问题，如何解决。（期间有个三级线上问题）</p>
-</li>
-<li><p>细节实现决定能否支撑业务： 对接业务流程接口，不仅要确保流程能否走通，也要看接口的细节，入参、出参是否满足业务流程。（踩过坑）</p>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>总结</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo配置</title>
     <url>/2021/10/11/c916c0138e93/</url>
     <content><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><ol>
@@ -241,7 +241,8 @@
 <p>如果在屏幕上，则设置time为0；如果组件不在屏幕上，则直接把时间设置为10s</p>
 <h3 id="调度"><a href="#调度" class="headerlink" title="调度"></a>调度</h3><p>创建常驻Timer，用于调度定时器</p>
 <p>在多线程上执行操作曝光逻辑。</p>
-<h3 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h3><p><img src="/Users/suiming/Documents/src/blog/source/_posts/%E7%B2%BE%E5%87%86%E6%9B%9D%E5%85%89%E7%BB%84%E4%BB%B6%E6%80%BB%E7%BB%93.assets/%E6%9B%9D%E5%85%89%E7%BB%84%E4%BB%B6%E8%AE%BE%E8%AE%A1-%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="曝光组件设计-流程图"></p>
+<h3 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h3><img src="expose-progress.png" alt="expose-progress.png" />
+
 <h2 id="Product"><a href="#Product" class="headerlink" title="Product"></a>Product</h2><p>github地址： <a href="https://github.com/suiming/PetersLab">suiming/PetersLab (github.com)</a></p>
 ]]></content>
       <tags>
