@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>APP技术设计小结</title>
-    <url>/2021/10/11/1bcd4ad1a20b/</url>
+    <url>/2021/11/13/6f9d8fb36a4e/</url>
     <content><![CDATA[<p>近期做APP的技术方案，需要和WEB端协同上线，踩了一些坑。记录如下</p>
 <h2 id="沟通"><a href="#沟通" class="headerlink" title="沟通"></a>沟通</h2><ul>
 <li><p>背景沟通：项目启动拉通各业务线产品、开发，介绍大家认识；讲解项目背景；达成一致的远景。</p>
@@ -29,7 +29,7 @@
   </entry>
   <entry>
     <title>Hexo配置</title>
-    <url>/2021/10/11/c916c0138e93/</url>
+    <url>/2021/11/11/ec566c05276b/</url>
     <content><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><ol>
 <li>Hexo是一个Node应用，Hexo通过Node的各种库，将.md文件生成静态网站。</li>
 <li>gitHub支持静态文件页面展示，因此Hexo生成的静态文件可以直接放到github中</li>
@@ -74,7 +74,7 @@
   </entry>
   <entry>
     <title>手机CPU天梯图</title>
-    <url>/2021/10/11/3b15911d429b/</url>
+    <url>/2021/11/12/07d5f8c6c794/</url>
     <content><![CDATA[<p>近期有换手机需求，仅供参考。</p>
 <hr>
 <table>
@@ -220,7 +220,7 @@
   </entry>
   <entry>
     <title>精准曝光组件介绍</title>
-    <url>/2021/10/11/07242229368b/</url>
+    <url>/2021/11/14/cb7376238656/</url>
     <content><![CDATA[<p>近期有个需求，当一个组件在可视区中间80%范围内出现3S，即上传曝光。组件移出页面再已入，需要再次按规则曝光。</p>
 <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><ol>
 <li>因为tableview 和 scrollview 有复用机制，需要考虑曝光对象维护问题，为防止乱，用数据 id作为唯一标识。</li>
