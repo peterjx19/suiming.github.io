@@ -28,36 +28,6 @@
       </tags>
   </entry>
   <entry>
-    <title>精准曝光组件介绍</title>
-    <url>/2021/11/14/cb7376238656/</url>
-    <content><![CDATA[<p>近期有个需求，当一个组件在可视区中间80%范围内出现3S，即上传曝光。组件移出页面再已入，需要再次按规则曝光。</p>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><ol>
-<li>因为tableview 和 scrollview 有复用机制，需要考虑曝光对象维护问题，为防止乱，用数据 id作为唯一标识。</li>
-<li>手机资源紧缺，需要共用一个计时器</li>
-<li>为了效率问题，需要在多线程上执行曝光逻辑</li>
-</ol>
-<h2 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h2><ol>
-<li>使用基础的数组和字典，存储唯一数据id和曝光时间</li>
-<li>使用累积的方式计算曝光时间</li>
-<li>使用全局唯一定时器触发更新曝光时间</li>
-<li>使用多个线程用于计算、曝光、移除、增加曝光时间。另起一个线程调度多线程计算</li>
-</ol>
-<h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;page_name&quot;: &#123;</span><br><span class="line">    &quot;component_name1&quot;: &#123;</span><br><span class="line">      &quot;data_id1&quot;: &#123;</span><br><span class="line">        &quot;view&quot;: &quot;组件引用地址——弱引用&quot;,</span><br><span class="line">        &quot;time&quot;: 0</span><br><span class="line">      &#125;</span><br><span class="line">      ...</span><br><span class="line">    &#125;</span><br><span class="line">    ...</span><br><span class="line">  &#125;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>每次由组件触发加载数据，则找到page_name, 再找到component_name, 生成一个data_id1: object的节点。</p>
-<p>如果在屏幕上，则设置time为0；如果组件不在屏幕上，则直接把时间设置为10s</p>
-<h3 id="调度"><a href="#调度" class="headerlink" title="调度"></a>调度</h3><p>创建常驻Timer，用于调度定时器</p>
-<p>在多线程上执行操作曝光逻辑。</p>
-<h3 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h3><p><img src="https://i.loli.net/2021/11/28/jBMr3TXWHhPuyRO.png" alt="精准曝光流程图"></p>
-<h2 id="Product"><a href="#Product" class="headerlink" title="Product"></a>Product</h2><p>github地址： <a href="https://github.com/suiming/PetersLab">suiming/PetersLab (github.com)</a></p>
-]]></content>
-      <tags>
-        <tag>技术方案</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo配置</title>
     <url>/2021/11/11/ec566c05276b/</url>
     <content><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><ol>
@@ -245,6 +215,60 @@
 ]]></content>
       <tags>
         <tag>硬件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>精准曝光组件介绍</title>
+    <url>/2021/11/14/cb7376238656/</url>
+    <content><![CDATA[<p>近期有个需求，当一个组件在可视区中间80%范围内出现3S，即上传曝光。组件移出页面再已入，需要再次按规则曝光。</p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><ol>
+<li>因为tableview 和 scrollview 有复用机制，需要考虑曝光对象维护问题，为防止乱，用数据 id作为唯一标识。</li>
+<li>手机资源紧缺，需要共用一个计时器</li>
+<li>为了效率问题，需要在多线程上执行曝光逻辑</li>
+</ol>
+<h2 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h2><ol>
+<li>使用基础的数组和字典，存储唯一数据id和曝光时间</li>
+<li>使用累积的方式计算曝光时间</li>
+<li>使用全局唯一定时器触发更新曝光时间</li>
+<li>使用多个线程用于计算、曝光、移除、增加曝光时间。另起一个线程调度多线程计算</li>
+</ol>
+<h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;page_name&quot;: &#123;</span><br><span class="line">    &quot;component_name1&quot;: &#123;</span><br><span class="line">      &quot;data_id1&quot;: &#123;</span><br><span class="line">        &quot;view&quot;: &quot;组件引用地址——弱引用&quot;,</span><br><span class="line">        &quot;time&quot;: 0</span><br><span class="line">      &#125;</span><br><span class="line">      ...</span><br><span class="line">    &#125;</span><br><span class="line">    ...</span><br><span class="line">  &#125;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>每次由组件触发加载数据，则找到page_name, 再找到component_name, 生成一个data_id1: object的节点。</p>
+<p>如果在屏幕上，则设置time为0；如果组件不在屏幕上，则直接把时间设置为10s</p>
+<h3 id="调度"><a href="#调度" class="headerlink" title="调度"></a>调度</h3><p>创建常驻Timer，用于调度定时器</p>
+<p>在多线程上执行操作曝光逻辑。</p>
+<h3 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h3><p><img src="https://i.loli.net/2021/11/28/jBMr3TXWHhPuyRO.png" alt="精准曝光流程图"></p>
+<h2 id="Product"><a href="#Product" class="headerlink" title="Product"></a>Product</h2><p>github地址： <a href="https://github.com/suiming/PetersLab">suiming/PetersLab (github.com)</a></p>
+]]></content>
+      <tags>
+        <tag>技术方案</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>需求技术评审checklist</title>
+    <url>/2021/12/22/50c16aafb237/</url>
+    <content><![CDATA[<p>需求技术评审，主要评审业务本身是否清晰，在数据层能不能支持，在系统内部是否能形成闭环，本迭代的能力能否完成。</p>
+<h2 id="业务本身"><a href="#业务本身" class="headerlink" title="业务本身"></a>业务本身</h2><ol>
+<li>怎么展示：正常、数据多、数据少、数据空、无权限、是否翻页</li>
+<li>怎么交互：站在用户角度，交互是否清晰准确，能否理解</li>
+<li>本次业务对现有业务的影响：会不会开新口子导致无法闭环</li>
+<li>本次业务能否自己形成闭环：可要求查看后台配置页面</li>
+</ol>
+<h2 id="数据操作"><a href="#数据操作" class="headerlink" title="数据操作"></a>数据操作</h2><ol>
+<li>展示的数据来源是哪里</li>
+<li>操作后数据是怎么存储、怎么被其他人使用的</li>
+<li>新老版本APP是如何兼容的</li>
+</ol>
+<h2 id="第三方依赖"><a href="#第三方依赖" class="headerlink" title="第三方依赖"></a>第三方依赖</h2><ol>
+<li>APP与PC迭代进度，团队之间依赖对齐</li>
+<li>本次业务是否有第三方工具，是否已经预研、购买、接入</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>总结</tag>
       </tags>
   </entry>
 </search>
