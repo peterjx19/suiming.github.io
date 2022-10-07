@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/favicon.ico" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="码农Peter">
+<meta property="og:url" content="http://example.com/page/2/index.html">
+<meta property="og:site_name" content="码农Peter">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Peter">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/page/2/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>码农Peter</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">码农Peter</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">太卷？读书破万卷</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-主页">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>主页</a>
+
+  </li>
+        <li class="menu-item menu-item-标签">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-分类">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-归档">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/07/18/6fc7f6bac18e/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="码农Peter">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/07/18/6fc7f6bac18e/" class="post-title-link" itemprop="url">《原则》作者经历(一)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-07-18 20:04:11" itemprop="dateCreated datePublished" datetime="2022-07-18T20:04:11+08:00">2022-07-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-29 08:57:56" itemprop="dateModified" datetime="2022-09-29T08:57:56+08:00">2022-09-29</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="导读"><a href="#导读" class="headerlink" title="导读"></a>导读</h1><h2 id="作者说他的成功在于无知的时候知道自己怎么做。基于某些原则，让他获得了成功。"><a href="#作者说他的成功在于无知的时候知道自己怎么做。基于某些原则，让他获得了成功。" class="headerlink" title="作者说他的成功在于无知的时候知道自己怎么做。基于某些原则，让他获得了成功。"></a>作者说他的成功在于无知的时候知道自己怎么做。基于某些原则，让他获得了成功。</h2><p>原则的重要性？</p>
+<ol>
+<li>面对需要快速做出反应的事件，拥有原则可以快速做出正确的反应，而不是每次都像第一次遇到一样。</li>
+<li>依据清晰的原则做事，将我们自己认为合适的原则写下来，促使自己清楚知道自己原则，改进原则，做更好的决定，让别人更好理解我。</li>
+</ol>
+<h2 id="什么叫做拥有自己的原则？"><a href="#什么叫做拥有自己的原则？" class="headerlink" title="什么叫做拥有自己的原则？"></a>什么叫做拥有自己的原则？</h2><p>独立思考并决定 想要什么、事实是什么、这个事实下如何实现自己愿望。<br>保持谦虚和心胸开阔，动用自己最佳思维。<br>原则需要真实反映你的性格和价值观，做到知行合一并不断反思。</p>
+<h2 id="作者的原则，怎么得到这些原则的？"><a href="#作者的原则，怎么得到这些原则的？" class="headerlink" title="作者的原则，怎么得到这些原则的？"></a>作者的原则，怎么得到这些原则的？</h2><p>成功的关键在于，知道如何努力追求很多东西，也知道如何正确地失败（经历失败后吸取教训）<br>作者不断学习和不断改进。</p>
+<h3 id="1-用可信度加权的方式做决定"><a href="#1-用可信度加权的方式做决定" class="headerlink" title="1. 用可信度加权的方式做决定"></a>1. 用可信度加权的方式做决定</h3><p>我怎么知道我是对的</p>
+<h3 id="2-按照原则做事"><a href="#2-按照原则做事" class="headerlink" title="2. 按照原则做事"></a>2. 按照原则做事</h3><p>清晰、明确、轻松地评估逻辑，可以判断自己是否知行合一</p>
+<h3 id="3-用系统化的方式做决策"><a href="#3-用系统化的方式做决策" class="headerlink" title="3. 用系统化的方式做决策"></a>3. 用系统化的方式做决策</h3><p>算法的形式将决策标准列出来，不带感情、更快，在可信度加权的情况下极其强大。</p>
+<h3 id="头脑中的决策"><a href="#头脑中的决策" class="headerlink" title="头脑中的决策"></a>头脑中的决策</h3><p>基于系统化做出的决策，让作者冲普通中产变成常规标准中的成功人士<br>给予了有意义的工作和人际关系，作者、作者原则、桥水独特运营方式得到大家的认可。</p>
+<h2 id="这本书分成三部分"><a href="#这本书分成三部分" class="headerlink" title="这本书分成三部分"></a>这本书分成三部分</h2><h3 id="第一部分："><a href="#第一部分：" class="headerlink" title="第一部分："></a>第一部分：</h3><p>作者的经历，读者请按照原则去映射他的故事，看到原则的逻辑和价值，并判断多大程度上适用我自己</p>
+<h3 id="第二部分"><a href="#第二部分" class="headerlink" title="第二部分"></a>第二部分</h3><p>生活原则：讲述原则怎么应用于自然世界、私人生活、人际关系、企业经营和决策。<br>个人目标做出有效决策的五步流程<br>心理学和神经学理论，说明如何将这些理论应用到生活中</p>
+<h3 id="第三部分"><a href="#第三部分" class="headerlink" title="第三部分"></a>第三部分</h3><p>桥水的运营方式<br>创业择优：极度求真、透明实现有意义的工作和人际关系<br>在微观层面如何实践。<br>基于工作原则，构建明智高效的决策</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/29/a2ec1a978da3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="码农Peter">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/05/29/a2ec1a978da3/" class="post-title-link" itemprop="url">《微习惯——简单到不可能失败的自我管理法则》</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-05-29 15:59:44" itemprop="dateCreated datePublished" datetime="2022-05-29T15:59:44+08:00">2022-05-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-05-30 09:36:46" itemprop="dateModified" datetime="2022-05-30T09:36:46+08:00">2022-05-30</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="微习惯"><a href="#微习惯" class="headerlink" title="微习惯"></a>微习惯</h1><p>看上去是一个自我管理系统，从小习惯开始</p>
+<h2 id="目录："><a href="#目录：" class="headerlink" title="目录："></a>目录：</h2><ol>
+<li>微习惯是什么：习惯和大脑；培养好习惯</li>
+<li>大脑的工作原理： 稳定大脑；聪明管理者；自动行为放逾期；模式探测器</li>
+<li>动力VS意志力： 意志力打败动力原因；意志力工作原理</li>
+<li>微习惯策略：运用意志力；拓宽舒适区；出现阻力时间点；跨越障碍</li>
+<li>微习惯独特之处：现有习惯；微习惯+意志力；没有截止时间；提升自我效能感；自主感</li>
+<li>彻底改变的八步骤：选择微习惯和计划；挖掘内在价值；纳入日程；回报机制；跟踪；微量开始超额完成；服从计划；留意习惯标记</li>
+<li>微习惯八大规则：不自欺；满意每个进步；回报自己；保持头脑清醒；<br>感觉强烈抵触后退缩小目标；提醒自己很轻松；不要小看；多余精力超额完成任务</li>
+</ol>
+<h2 id="大脑组成和微习惯原理"><a href="#大脑组成和微习惯原理" class="headerlink" title="大脑组成和微习惯原理"></a>大脑组成和微习惯原理</h2><p>大脑由执行决策和自我行为模式识别两部分组成。</p>
+<ol>
+<li><p>前额皮层管理功能相当活跃，但是需要消耗大量精力</p>
+</li>
+<li><p>基底神经节的自动功能，效率高，无需持续监督能处理各种任务。</p>
+</li>
+</ol>
+<h2 id="微习惯策略的重点"><a href="#微习惯策略的重点" class="headerlink" title="微习惯策略的重点"></a>微习惯策略的重点</h2><h3 id="远离消极的东西；靠近积极的东西"><a href="#远离消极的东西；靠近积极的东西" class="headerlink" title="远离消极的东西；靠近积极的东西"></a>远离消极的东西；靠近积极的东西</h3><p>给生活注入好习惯，被动坏习惯通常会被替换。</p>
+<p>微习惯，小的不可思议的一小步，可以触发正反馈，提升自我效能感，减轻抵触情绪，获得惯性。</p>
+<p>压力大会促使你使用习惯做法，如果习惯很好，对自己来说是非常好的。</p>
+<h3 id="大脑分工和微习惯关系"><a href="#大脑分工和微习惯关系" class="headerlink" title="大脑分工和微习惯关系"></a>大脑分工和微习惯关系</h3><p>大脑前额皮层容易疲劳，功能强大，消耗太多精力，当疲劳时，掌管重复的部分会接管大脑。这块是基底神经节，一旦我们训练基底神经节完成积极的重复行为，我们就能获得巨大的收益。</p>
+<h2 id="微习惯和意志力"><a href="#微习惯和意志力" class="headerlink" title="微习惯和意志力"></a>微习惯和意志力</h2><p>越缺乏动力，你消耗的意志力越高；意志力消耗太高，你就难以持续。</p>
+<ol>
+<li>动力并不可靠： 精力不足；很难培养；你不想；热情递减。所以不要依赖动力，有很好，没有也没关系。</li>
+<li>意志力很可靠：能自我强迫；可以强化；可以通过计划执行。</li>
+</ol>
+<p>意志力损耗的5个因素：努力程度、感知难度、消极情绪、主观疲劳、血糖水平。</p>
+<p>微习惯几乎不会消耗意志力，能保证你的意志无穷无尽，同时在任何情况下都能启动一个微习惯。</p>
+<ol>
+<li>努力程度： 自我损耗极小</li>
+<li>感知难度： 没有难度</li>
+<li>消极情绪：你几乎感觉不到因为要做微习惯导致的消极情绪</li>
+<li>主观疲劳： 微量疲劳，一想到微目标，就感觉精力充沛</li>
+<li>血糖水平：在低血糖和疲劳是，最能让你动起来的是微习惯</li>
+</ol>
+<h2 id="微习惯和阻力"><a href="#微习惯和阻力" class="headerlink" title="微习惯和阻力"></a>微习惯和阻力</h2><ol>
+<li>阻力： 启动阻力（初始速度） 继续行动阻力（加速度）</li>
+<li>自主权是微习惯的另一个重要的核心。</li>
+<li>微习惯带来自我能效感、自主权、远离恐惧胆怯和忧郁、增强正念</li>
+</ol>
+<h2 id="微习惯的八步走"><a href="#微习惯的八步走" class="headerlink" title="微习惯的八步走"></a>微习惯的八步走</h2><ol>
+<li>选择三个微习惯，评估并做好长期计划<br>把习惯变成小的不可思议，小到让你感到荒唐。</li>
+<li>给习惯赋予意义</li>
+<li>设定计划</li>
+<li>确定回报</li>
+<li>记录</li>
+<li>微量开始，超额完成</li>
+<li>服从安排，摆脱高期待</li>
+<li>留意习惯养成的标记： 不抵触、认同自己、行动不需考虑、不担心、常态化<br>即使没有超额完成，你也是了不起的，超额完成了，你是很了不起。</li>
+</ol>
+<h2 id="微习惯设定的重要原则"><a href="#微习惯设定的重要原则" class="headerlink" title="微习惯设定的重要原则"></a>微习惯设定的重要原则</h2><ol>
+<li>不自欺，不要偷偷提高标准</li>
+<li>满意每一步，大脑错觉是微习惯的重要核心，是一种相信小积累能量变到质变</li>
+<li>经常回报自己，恢复意志力</li>
+<li>保持清醒，完成了任务兴奋，执行时单调和重复，都应该平常心</li>
+<li>提醒自己很轻松</li>
+<li>相信微步骤</li>
+<li>不要制订更大的目标，而应该专注任务</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/17/be55bd98cb22/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="码农Peter">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/05/17/be55bd98cb22/" class="post-title-link" itemprop="url">《学习之道》(十)总结：十个好的学习法则、十个坏的学习法则</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-05-17 22:30:47" itemprop="dateCreated datePublished" datetime="2022-05-17T22:30:47+08:00">2022-05-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-05-30 09:36:46" itemprop="dateModified" datetime="2022-05-30T09:36:46+08:00">2022-05-30</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>释放无尽潜力</p>
+<h1 id="10个好的学习法则"><a href="#10个好的学习法则" class="headerlink" title="10个好的学习法则"></a>10个好的学习法则</h1><ol>
+<li>运用回想 （小学语文总结段落思想、中心思想）</li>
+<li>自我测试</li>
+<li>对问题组块</li>
+<li>间隔重复动作</li>
+<li>练习中交替不同的解法</li>
+<li>注意休息</li>
+<li>使用解释性的提问和简单的类比（费曼提出）</li>
+<li>专注</li>
+<li>困难的事情最先做</li>
+<li>心理对照</li>
+</ol>
+<h1 id="10个坏的学习法则"><a href="#10个坏的学习法则" class="headerlink" title="10个坏的学习法则"></a>10个坏的学习法则</h1><ol>
+<li>被动重复阅读</li>
+<li>满眼重点标记</li>
+<li>瞟一眼解题思路，就胸有成竹</li>
+<li>火烧眉毛才学习</li>
+<li>清楚解法，仍反复练习</li>
+<li>与朋友把学习变成闲聊</li>
+<li>做题忽视课本</li>
+<li>有疑问不找导师和同学核对并解决</li>
+<li>时常分心，还以为自己学的深入</li>
+<li>睡眠不足</li>
+</ol>
+<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><h2 id="分类、感想"><a href="#分类、感想" class="headerlink" title="分类、感想"></a>分类、感想</h2><p>如果对书分类，这是一本工具书，又不局限于工具书，</p>
+<p>有句话是「假传万卷书真传一句话」。</p>
+<p>就是说如果仅仅是工具书，告诉你怎么做就好了。</p>
+<p>但是我们都是凡人，没有那么高的悟性。作者要让你心服口服，就把原理和推导过程告诉你，让你自己得出结论说服自己，方能让你心服口服。</p>
+<h2 id="内容评论"><a href="#内容评论" class="headerlink" title="内容评论"></a>内容评论</h2><p>这本书引入大量的论证和参考文献去解释每一条法则，最终就是这一页的内容。如果没有经过前面的学习，我会有很多疑问和踌躇：要么动作不标准；要么半信半疑地做。</p>
+<h2 id="价值"><a href="#价值" class="headerlink" title="价值"></a>价值</h2><p>目前我吸取到对我最有帮助的习惯有：学习要专注理解、每小节总结、搭建组块、间隔地重复、简化组块模型。</p>
+<p>反思我学习习惯，搭建组块和重复的事情很少做，所以学得多，记住的很少，效果很差。</p>
+<p>在之后的学习中，要好好的用到这些原理，并经常翻翻这本书，内化这本书，养成良好的学习习惯。</p>
+<p>认识自己大脑的运行方式，充分发挥大脑潜力。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/17/28f76e774ead/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="码农Peter">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/05/17/28f76e774ead/" class="post-title-link" itemprop="url">《学习之道》(九)如何准备考试</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-05-17 22:30:37" itemprop="dateCreated datePublished" datetime="2022-05-17T22:30:37+08:00">2022-05-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-05-30 09:36:46" itemprop="dateModified" datetime="2022-05-30T09:36:46+08:00">2022-05-30</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="备考检查清单-经常做才能回答是"><a href="#备考检查清单-经常做才能回答是" class="headerlink" title="备考检查清单(经常做才能回答是)"></a>备考检查清单(经常做才能回答是)</h1><ol>
+<li> 尽力理解课本内容（带目的找例题不算）。</li>
+<li>和同学一起解决作业问题，核对答案。</li>
+<li>和同学合作之前，尝试自己大致写出每道题的解法。</li>
+</ol>
+<h1 id="备考"><a href="#备考" class="headerlink" title="备考"></a>备考</h1><p>回答越多是，说明备考越好，两个和两个以上否要改变思路</p>
+<ol>
+<li>积极参与家庭作业小组讨论（贡献点子，提出问题）。</li>
+<li>遇到困难请求老师和助教。</li>
+<li>交作业时完全理解所有问题的答案。</li>
+<li>不明白解法时，在课上提问需求解释。</li>
+<li>学习指导手册，考前有仔细通读过一遍吗，确保手册上所有问题都会做了吗。</li>
+<li>尝试快速列出解题纲要，而不在基础计算上花时间。</li>
+<li>一起复习学习指导手册和问题，并相互提问。</li>
+<li>考前有复习题，是否参加过，在课上提出任何你不太确定的问题。</li>
+<li>考前有合理的睡眠。</li>
+</ol>
+<h1 id="更多技巧"><a href="#更多技巧" class="headerlink" title="更多技巧"></a>更多技巧</h1><ol>
+<li>有难入简，先做男难的，能做多少是多少；然后做简单的；然后再做另一道困难的。 保证发散模式能充分发挥作用。</li>
+<li>考试前克服恐惧：把计划B写出来，写下临考前自己的感觉和想法。</li>
+<li>考试中克服焦虑：把注意力转移到呼吸上，手放到腹部，体会手的起伏。</li>
+<li>考前浏览复习材料，重温一遍。</li>
+<li>考中从后往前检查，正面的念头。</li>
+<li>做题时停顿几秒，如闭眼5秒钟。</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/17/8e2783aca30c/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="码农Peter">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/05/17/8e2783aca30c/" class="post-title-link" itemprop="url">《学习之道》(八)塑造你的大脑、学习的复兴</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-05-17 22:30:31" itemprop="dateCreated datePublished" datetime="2022-05-17T22:30:31+08:00">2022-05-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-05-30 09:36:46" itemprop="dateModified" datetime="2022-05-30T09:36:46+08:00">2022-05-30</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="形成直观的认知"><a href="#形成直观的认知" class="headerlink" title="形成直观的认知"></a>形成直观的认知</h1><ol>
+<li>在熟练运用组块资料之后，尽量不要纠结于每一个小细节，而是自然而然地去解决问题。</li>
+<li>有些同学能快速掌握材料，给别人打击，但是平均水平的学生在主动性上、做好事情能力上和创造力占优。</li>
+<li>把握创造力的关键是专注模式切换到更放松、白日梦一样的发散模式。</li>
+</ol>
+<h1 id="事实"><a href="#事实" class="headerlink" title="事实"></a>事实</h1><ol>
+<li>大脑发育速度不一样，有些人25岁才完成发育。</li>
+<li>在科学界很多重量人物，起初都是问题少年。</li>
+<li>在科学数学技术领域取得成功的专业人士，逐渐习得一个特质，就是如何组块——提炼关键思想。</li>
+<li>比喻和实体类比也能构建组块，组块可使截然不同的领域概念对另一个领域产生影响。</li>
+<li>无论做什么职业，都要有开放的心态，保证自己学习宝库常备数学和科学知识，存储更多组块。</li>
+</ol>
+<h1 id="抽象和简化概念"><a href="#抽象和简化概念" class="headerlink" title="抽象和简化概念"></a>抽象和简化概念</h1><ol>
+<li>心灵之眼非常重要，帮我们在大脑中排演，将学过的知识拟人化。</li>
+<li>迁移是把所学知识从一个知识背景运用到别处的能力。</li>
+<li>关键是要掌握一个数学概念的精髓，有利于概念迁移和将之应用到新途径中。</li>
+<li>学习过程中一心多用让学习无法深入，限制迁移所学知识的能力。</li>
+</ol>
+<h1 id="学习的复兴"><a href="#学习的复兴" class="headerlink" title="学习的复兴"></a>学习的复兴</h1><ol>
+<li>自主学习是一种最深入、最有效的学习方式</li>
+<li>提高独立思考能力</li>
+<li>在学习中毅力往往比智力更加重要</li>
+<li>锻炼自己去解除你敬仰的人，你会结识知识渊博的导师，一席话可能改变你的未来。</li>
+<li>如果你没有快速掌握学习材料的重点，不要灰心，学的慢的同学会抓住根本问题，真正理解前因后果能更深层次地理解问题。</li>
+<li>人人是竞争和合作的关系，总有人批评和低估你付出的努力，请淡然处之。</li>
+</ol>
+<h1 id="团队合作"><a href="#团队合作" class="headerlink" title="团队合作"></a>团队合作</h1><ol>
+<li>即使自信一切没问题，专注模式可能在不经意犯下致命错误。</li>
+<li>和愿意提出不同见解的小伙伴一起讨论，找出想法中的方法；随机应变应对压力；确保自己真的理解了你想让别人结识的知识，巩固已有知识；建立重要的职业关系</li>
+<li>客观对待学习中的批评，不要自欺欺人</li>
+</ol>
+<h1 id="物理学教授布拉德-罗斯对学习的建议"><a href="#物理学教授布拉德-罗斯对学习的建议" class="headerlink" title="物理学教授布拉德*罗斯对学习的建议"></a>物理学教授布拉德*罗斯对学习的建议</h1><ol>
+<li>检查计算过程花的时间比解决过程花的时间少很多，多检查。</li>
+<li>量纲分析是你的朋友，错误极有可能发生在计量单位不匹配的关键点上。</li>
+<li>思考方程的意义，对计算结果有预期。</li>
+<li>复杂因子，变量分别取极限，看是否对你的理解方程有意义。</li>
+</ol>
+<p>想起高中时候考试，我都是先把所有题目都看一遍，尤其是大题目，尝试写下是哪个模块下的什么思路。然后才从头做简单的题目。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/17/318b42ddd32f/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="码农Peter">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/05/17/318b42ddd32f/" class="post-title-link" itemprop="url">《学习之道》(七)记忆</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-05-17 22:30:26" itemprop="dateCreated datePublished" datetime="2022-05-17T22:30:26+08:00">2022-05-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-05-30 09:36:46" itemprop="dateModified" datetime="2022-05-30T09:36:46+08:00">2022-05-30</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="记忆宫殿法"><a href="#记忆宫殿法" class="headerlink" title="记忆宫殿法"></a>记忆宫殿法</h1><p>有助于记忆的形象嵌入熟悉的场景，让自己感受视觉记忆系统赋予的力量</p>
+<p>理解后再记忆，对学习材料记忆犹新</p>
+<h1 id="空间思维的提升"><a href="#空间思维的提升" class="headerlink" title="空间思维的提升"></a>空间思维的提升</h1><ol>
+<li>童年时期打篮球、拆装玩具</li>
+<li>准确地素描，玩3D电脑游戏</li>
+<li>玩3D拼图</li>
+<li>弃用DPS，用地图导航</li>
+</ol>
+<h2 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h2><ol>
+<li>使用记忆宫殿</li>
+<li>给同学讲述记忆宫殿法。</li>
+</ol>
+<h1 id="口述记忆宫殿法"><a href="#口述记忆宫殿法" class="headerlink" title="口述记忆宫殿法"></a>口述记忆宫殿法</h1><ol>
+<li>挑选你熟悉的空间，如办公室布局，或者家庭布局，把它当成你的记事本</li>
+<li>将要记忆的内容按顺序分别放到布局中的某个地方，并想象成一个鲜活的场景。</li>
+<li>按照在空间布局中行进路径，多走几遍。</li>
+</ol>
+<h1 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h1><ol>
+<li>打造生动形象的比喻</li>
+<li>间隔重复有助将概念向记忆存储</li>
+<li>创建意群（如藏头诗一样，把整个内容抽成一句话）</li>
+<li>别把窍门和真正知识混为一谈</li>
+<li>讲故事</li>
+<li>动手写写加强记忆</li>
+<li>自言自语说给自己听</li>
+<li>体育锻炼对神经元生长有很大促进作用</li>
+<li>入睡前，回顾当天所学。</li>
+</ol>
+<h1 id="练习-1"><a href="#练习-1" class="headerlink" title="练习"></a>练习</h1><p>拿出一张纸，给要理解的概念创建一个形象的类比和口诀</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/17/146fe55d6513/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="码农Peter">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/05/17/146fe55d6513/" class="post-title-link" itemprop="url">《学习之道》(六)工具</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-05-17 22:30:22" itemprop="dateCreated datePublished" datetime="2022-05-17T22:30:22+08:00">2022-05-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-05-30 09:36:46" itemprop="dateModified" datetime="2022-05-30T09:36:46+08:00">2022-05-30</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h1><ol>
+<li>整理环境、冥想避免干扰</li>
+<li>改造为负面思维为正面思维</li>
+<li>有负面小情绪可理解，立刻开始做</li>
+<li>不开电脑、先看简单的题、抄下要解决的题随身带着直到脱不下去了。 </li>
+</ol>
+<h1 id="行动日记"><a href="#行动日记" class="headerlink" title="行动日记"></a>行动日记</h1><ol>
+<li>简单列出下个星期要做的关键任务清单，一周一次。</li>
+<li>在第一天写出第二天的日行计划清单</li>
+<li>每天都专注今天的任务。</li>
+<li>先从最困难的事做起</li>
+</ol>
+<h1 id="玛丽查的数学浸泡实践"><a href="#玛丽查的数学浸泡实践" class="headerlink" title="玛丽查的数学浸泡实践"></a>玛丽查的数学浸泡实践</h1><ol>
+<li>学习材料的某小节，所有题目做一遍，每种类型都练到</li>
+<li>浸泡难题</li>
+<li>用表格列出所有重要概念，给各类问题配上例题</li>
+<li>考前列一张内容全面的表格，包含科目、小结题型、解题技巧</li>
+</ol>
+<h1 id="克服拖延"><a href="#克服拖延" class="headerlink" title="克服拖延"></a>克服拖延</h1><ol>
+<li>记录行程日记</li>
+<li>每天承诺完成一定任务</li>
+<li>睡前写下计划的任务</li>
+<li>将工作细化成一系列笑挑战</li>
+<li>相信自己的新时间系统</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/17/959f2b56ef84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="码农Peter">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/05/17/959f2b56ef84/" class="post-title-link" itemprop="url">《学习之道》(五)克服拖延</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-05-17 22:30:18" itemprop="dateCreated datePublished" datetime="2022-05-17T22:30:18+08:00">2022-05-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-05-30 09:36:46" itemprop="dateModified" datetime="2022-05-30T09:36:46+08:00">2022-05-30</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="拖延的危害："><a href="#拖延的危害：" class="headerlink" title="拖延的危害："></a>拖延的危害：</h1><ol>
+<li>学科学依赖于1. 学习期 2. 间隔复习，能否掌握拖延对科学专业学生很重要</li>
+<li>我们拖延的，往往是让我们不安的事情</li>
+<li>拖延如在复用微量毒药，一时看不出来，日记月累危害极大</li>
+<li>对一项任务的恐惧比任务本身消耗更多的时间和能量</li>
+</ol>
+<h1 id="习惯的四个组成部分"><a href="#习惯的四个组成部分" class="headerlink" title="习惯的四个组成部分"></a>习惯的四个组成部分</h1><ol>
+<li>信号，触发点</li>
+<li>反应程序， 接到信号的习惯性反应</li>
+<li>奖励机制， 好习惯可以迅速奖励你，脱离拖延</li>
+<li>信念</li>
+</ol>
+<h2 id="信号："><a href="#信号：" class="headerlink" title="信号："></a>信号：</h2><p>改变对信号的反应，是唯一需要动用意志力的环节。</p>
+<p>保护反应程序，最终会反过来保护你，避免干扰，远离网络。</p>
+<h2 id="反应程序"><a href="#反应程序" class="headerlink" title="反应程序"></a>反应程序</h2><p>改变的关键点在于制订计划，培养新习惯很有用 </p>
+<h2 id="奖励机制"><a href="#奖励机制" class="headerlink" title="奖励机制"></a>奖励机制</h2><p>小小的自我赞扬，启动大脑重塑过程，习得性勤奋</p>
+<h2 id="信念"><a href="#信念" class="headerlink" title="信念"></a>信念</h2><p>对新系统效果坚信不易，能帮我度过难关</p>
+<ol>
+<li>心理对照</li>
+<li>想象未来图景，好日子在后头，要努力。</li>
+<li>痛苦的事情，要关注过程，而不是结果。</li>
+<li>分解工作量：</li>
+<li>番茄工作法</li>
+<li>训练自己无视干扰</li>
+<li>隔绝干扰</li>
+<li>不要一心多用</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/17/ec04e3e7f461/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="码农Peter">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/05/17/ec04e3e7f461/" class="post-title-link" itemprop="url">《学习之道》(四)组块的构建</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-05-17 22:21:00" itemprop="dateCreated datePublished" datetime="2022-05-17T22:21:00+08:00">2022-05-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-05-30 09:36:46" itemprop="dateModified" datetime="2022-05-30T09:36:46+08:00">2022-05-30</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="解题有两种模式"><a href="#解题有两种模式" class="headerlink" title="解题有两种模式"></a>解题有两种模式</h1><p>按顺序推理和跳跃式的，而直觉是跳跃式的，大部分难题是由直觉解决的，需要用专注模式对直接进行验证，直觉并不总是正确的。</p>
+<h1 id="构建组块的重要性"><a href="#构建组块的重要性" class="headerlink" title="构建组块的重要性"></a>构建组块的重要性</h1><ol>
+<li>一个过程或者思路理解透彻后，在宏观视角可视为一个整体，高度压缩后存进大脑，浓缩的思维让人获取洞察力</li>
+<li>重复和练习的背后是固化组块，难点是枯燥</li>
+<li>如果想对学习材料了如指掌，那么从上至下的宏观视角和从下至上的组块能力都不可或缺。</li>
+</ol>
+<p>我们都喜欢创新，以及能够纵览全局的学习。但在数学和科学的学习中，必须进行适量的练习和重复，否则就无法构建组块来支撑专业技能科学的学习中，必须进行适量的练习和重复，否则就无法构建组块来支撑专业技能</p>
+<h1 id="提取知识"><a href="#提取知识" class="headerlink" title="提取知识"></a>提取知识</h1><p>提取知识和回想知识帮助我们增加了学习深度，帮组我们实现组块。</p>
+<p>如果一开始就画概念图之间关系，就是基础组块还没建立，就试着构建联结，完全是空中阁楼</p>
+<p>活动一下，对难以理解的关键概念特别有用</p>
+<h1 id="整理组块"><a href="#整理组块" class="headerlink" title="整理组块"></a>整理组块</h1><p>战胜自己， 整理课堂笔记和阅读笔记</p>
+<p>与其过度学习，不如穿插学习</p>
+<p>不要在同一个概念和技巧上投入太多时间学习，一旦理解了这个概念，就应该去学其他概念，隔几天在回顾这个概念。</p>
+<h1 id="如何搭建强有力的组块"><a href="#如何搭建强有力的组块" class="headerlink" title="如何搭建强有力的组块"></a>如何搭建强有力的组块</h1><ol>
+<li>全程纸上解决一个重难点问题 （要有线程答案，但是提交答案前不看）</li>
+<li>重做一次，注意关键步骤</li>
+<li>休息一下，启动发散模式</li>
+<li>睡眠</li>
+<li>再来一次，再次关注关键步骤（这个叫刻意练习）</li>
+<li>给自己添加新题</li>
+<li>主动重复，回想题目关键步骤</li>
+</ol>
+<h1 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h1><ol>
+<li>越努力回想学习材料，你的记忆就越深刻；</li>
+<li>提取练习是最强效的学习方式之一。</li>
+<li>遭遇瓶颈，自然现象，越过后理解会更加深刻。</li>
+<li>怎么备考，问题和答案梳理整齐，方便浏览；手写答案；主动重复。</li>
+<li>测试是强效的学习：避免发蒙（工作记忆被填满），组块可以给工作记忆留出更多空间。</li>
+</ol>
+<h1 id="灵感项目经验"><a href="#灵感项目经验" class="headerlink" title="灵感项目经验"></a>灵感项目经验</h1><ol>
+<li>挖掘他人身上正能量特质</li>
+<li>系统理解写下每个步骤</li>
+<li>重复练习、发散模式专注模式切换</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/17/bedbd93b4d60/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="码农Peter">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/05/17/bedbd93b4d60/" class="post-title-link" itemprop="url">《学习之道》(三)组块</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-05-17 22:20:56" itemprop="dateCreated datePublished" datetime="2022-05-17T22:20:56+08:00">2022-05-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-05-30 09:36:46" itemprop="dateModified" datetime="2022-05-30T09:36:46+08:00">2022-05-30</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>专注的练习和重复是创造记忆痕迹的过程，任何专业技能的培养都是积跬步已成千里的过程</p>
+<h1 id="组块是什么？"><a href="#组块是什么？" class="headerlink" title="组块是什么？"></a>组块是什么？</h1><h2 id="所罗门的组块难题"><a href="#所罗门的组块难题" class="headerlink" title="所罗门的组块难题"></a>所罗门的组块难题</h2><p>所罗门记者过目不忘，每条记忆痕迹都非常鲜明，妨碍了他对记忆痕迹真核，创造概念的块。</p>
+<p>组块是根据意义将信息碎片组成的集合，组成一个有意义、便于记忆的组块。</p>
+<h2 id="思维组块是绝大多数科学、文学、艺术知识的构成基础"><a href="#思维组块是绝大多数科学、文学、艺术知识的构成基础" class="headerlink" title="思维组块是绝大多数科学、文学、艺术知识的构成基础"></a>思维组块是绝大多数科学、文学、艺术知识的构成基础</h2><p>要熟练掌握数学和科学，就要创造概念组块，将分散的碎片组合起来，让大脑高效运转。而不必纠缠微观基础信息，提纲挈领。</p>
+<h1 id="组块的基本步骤"><a href="#组块的基本步骤" class="headerlink" title="组块的基本步骤"></a>组块的基本步骤</h1><p>接触新知识，总是有线程的解题方法，首次尝试理解的认知负担很重。如陌生路上要开GPS，大量细节能够帮你看清关键特征和基本原理</p>
+<h2 id="专注"><a href="#专注" class="headerlink" title="专注"></a>专注</h2><p>注意力集中在需要组块的信息上，创造新的神经模型、和既有模型联结（自下而上搭建组块）</p>
+<h2 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h2><p>打包前要理解，专注和发散的交替思考，理清头绪、把握概念—— 课后要赶快复习，合上书本再找问题测验新学到的解题方法，提高学习效率（自上而下纵然全局）</p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>跳出初始问题，更宽广的视角看问题。推敲练习，有助于能用在哪，不能用在哪里， 会成为多条痕迹路径的驿站（熟悉背景构建联结）</p>
+<h2 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h2><p>睡觉前用当天知识为今天画上句号<br>宏观图景： 条理清晰演讲、章节大纲、流程图、表格、思维导图</p>
+<h1 id="能力错觉和回想"><a href="#能力错觉和回想" class="headerlink" title="能力错觉和回想"></a>能力错觉和回想</h1><p>不断阅读笔记和课本，产生错觉知识已经进入大脑。 小和尚念经。</p>
+<p>用对了学习策略，求知心才不会落个竹篮打水一场空。</p>
+<h1 id="学习技巧"><a href="#学习技巧" class="headerlink" title="学习技巧"></a>学习技巧</h1><ol>
+<li>划重点、下划线会误导和效率低下，欺骗你大脑在工作。 可以用六百</li>
+<li>在学习中回想，让大脑提取关键概念而不是反复阅读，蒋更加高效学习</li>
+<li>不看参考答案直到你交了作业</li>
+<li>24小时内巩固一次，写一遍笔记或背诵，几天、几月、几周复习一遍，以后就不会忘记了。</li>
+<li>不断地运用概念，直到变成自己第二天性，像工具一样信手拈来。</li>
+<li>从笔记挑一个概念，读一遍，然后拿开，看自己能会议多少内容。再看笔记试着回忆一下，可大幅增进认识</li>
+<li>专注钻研的部分，一但首页概念存入大脑，第二个概念进入大脑就容易一些，第三个也不会太难，这是努力让过程更轻松</li>
+<li>搭建组块过程是蓄念大脑过程，电脑识别特定问题、形式和类别，能自动快速对症下药，构建了组块模型。</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Peter</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">43</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/suiming" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;suiming" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:suiming.jx@gmail.com" title="E-Mail → mailto:suiming.jx@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/xuzhuread" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;xuzhuread" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Peter</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+</body>
+</html>

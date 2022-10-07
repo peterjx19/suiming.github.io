@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/favicon.ico" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="第三章 承诺与一致（一） 奇怪的现象一旦做出艰难的选择，人就很乐意相信自己选对了。我们一次次欺骗自己，以便在做出选择之后相信自己做的没错。 保持前后一致的动力，是一种威力巨大的社会印象武器，它经常令我们作出明显有违最佳利益的行为。 例子： 赛马场赌徒在押注之前犹豫不决，但是当他押注之后，就对这匹马非常有信心。 女子因为男友的问题离开了他，但是后来男友努力挽回并明确要改，她原谅了男友。但是男友反而变">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《影响力》第三章 承诺与一致（一）">
+<meta property="og:url" content="http://example.com/2022/04/21/37361f389eb5/index.html">
+<meta property="og:site_name" content="码农Peter">
+<meta property="og:description" content="第三章 承诺与一致（一） 奇怪的现象一旦做出艰难的选择，人就很乐意相信自己选对了。我们一次次欺骗自己，以便在做出选择之后相信自己做的没错。 保持前后一致的动力，是一种威力巨大的社会印象武器，它经常令我们作出明显有违最佳利益的行为。 例子： 赛马场赌徒在押注之前犹豫不决，但是当他押注之后，就对这匹马非常有信心。 女子因为男友的问题离开了他，但是后来男友努力挽回并明确要改，她原谅了男友。但是男友反而变">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-04-21T13:47:22.000Z">
+<meta property="article:modified_time" content="2022-05-30T01:36:46.462Z">
+<meta property="article:author" content="Peter">
+<meta property="article:tag" content="读书笔记">
+<meta property="article:tag" content="《影响力》">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2022/04/21/37361f389eb5/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>《影响力》第三章 承诺与一致（一） | 码农Peter</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">码农Peter</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">太卷？读书破万卷</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-主页">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>主页</a>
+
+  </li>
+        <li class="menu-item menu-item-标签">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-分类">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-归档">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/21/37361f389eb5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="码农Peter">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          《影响力》第三章 承诺与一致（一）
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-04-21 21:47:22" itemprop="dateCreated datePublished" datetime="2022-04-21T21:47:22+08:00">2022-04-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-05-30 09:36:46" itemprop="dateModified" datetime="2022-05-30T09:36:46+08:00">2022-05-30</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>第三章 承诺与一致（一）</p>
+<h2 id="奇怪的现象"><a href="#奇怪的现象" class="headerlink" title="奇怪的现象"></a>奇怪的现象</h2><p>一旦做出艰难的选择，人就很乐意相信自己选对了。我们一次次欺骗自己，以便在做出选择之后相信自己做的没错。</p>
+<p>保持前后一致的动力，是一种威力巨大的社会印象武器，它经常令我们作出明显有违最佳利益的行为。</p>
+<p>例子：</p>
+<p>赛马场赌徒在押注之前犹豫不决，但是当他押注之后，就对这匹马非常有信心。</p>
+<p>女子因为男友的问题离开了他，但是后来男友努力挽回并明确要改，她原谅了男友。但是男友反而变本加厉，这个时候女友反而更加爱他。因为这个女人要对自己的行为保持一致，即使欺骗自己也在所不惜。</p>
+<h2 id="这是为什么呢？"><a href="#这是为什么呢？" class="headerlink" title="这是为什么呢？"></a>这是为什么呢？</h2><ol>
+<li>信仰、言语和行为前后不一的人，会被看成是脑筋混乱、表里不一，甚至精神有毛病。</li>
+<li>另一方面言行高度一致大多与个性坚强、智力出众挂钩，是逻辑性、稳定性、诚实感的核心。</li>
+</ol>
+<p>大多数其他自动响应方式一样，为穿越复杂的现代生活提供了捷径。更容易避免误入歧途，遇到麻烦事可以让我们不用做棘手的抉择，逃避理性的折磨。</p>
+<h2 id="有例子吗？"><a href="#有例子吗？" class="headerlink" title="有例子吗？"></a>有例子吗？</h2><ol>
+<li>冥想讲师宣传他们的冥想课程，讲师被逻辑学教授驳斥地体无完肤，但是却更多人拿着钱走向了冥想讲师。命中了第二条，这些人想逃避理性的折磨，干脆交钱不思考了。</li>
+<li>玩具商在圣诞节前播放好玩玩具，但是不备足货，家长只能买同等价格的玩具。两个月后玩具商继续播放这个玩具广告，因为家长承诺过买这个玩具，只能乖乖过来买。</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="tag"># 读书笔记</a>
+              <a href="/tags/%E3%80%8A%E5%BD%B1%E5%93%8D%E5%8A%9B%E3%80%8B/" rel="tag"># 《影响力》</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/04/20/3350fb84ce7e/" rel="prev" title="《影响力》第二章：互惠">
+      <i class="fa fa-chevron-left"></i> 《影响力》第二章：互惠
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/04/21/3671f4e30d7c/" rel="next" title="《影响力》第三章-承诺与一致（二）">
+      《影响力》第三章-承诺与一致（二） <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A5%87%E6%80%AA%E7%9A%84%E7%8E%B0%E8%B1%A1"><span class="nav-number">1.</span> <span class="nav-text">奇怪的现象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%99%E6%98%AF%E4%B8%BA%E4%BB%80%E4%B9%88%E5%91%A2%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">这是为什么呢？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%89%E4%BE%8B%E5%AD%90%E5%90%97%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">有例子吗？</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Peter</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">43</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/suiming" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;suiming" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:suiming.jx@gmail.com" title="E-Mail → mailto:suiming.jx@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/xuzhuread" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;xuzhuread" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Peter</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'd98b64aad8f6c8a6ed97',
+      clientSecret: '4485ff70be66c3cdb51c774a56ce40e7d50a9ae9',
+      repo        : 'suiming.github.io',
+      owner       : 'suiming',
+      admin       : ['suiming'],
+      id          : 'e561a96c090521ba2901c09c9f7cad15',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>

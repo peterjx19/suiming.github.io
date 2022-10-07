@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/favicon.ico" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="码农Peter">
+<meta property="og:url" content="http://example.com/page/4/index.html">
+<meta property="og:site_name" content="码农Peter">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Peter">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/page/4/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>码农Peter</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">码农Peter</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">太卷？读书破万卷</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-主页">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>主页</a>
+
+  </li>
+        <li class="menu-item menu-item-标签">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-分类">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-归档">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/06/4bcaaa888180/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="码农Peter">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/05/06/4bcaaa888180/" class="post-title-link" itemprop="url">《影响力》第五章-喜好（一）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-05-06 23:27:38" itemprop="dateCreated datePublished" datetime="2022-05-06T23:27:38+08:00">2022-05-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-05-30 09:36:46" itemprop="dateModified" datetime="2022-05-30T09:36:46+08:00">2022-05-30</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="喜好"><a href="#喜好" class="headerlink" title="喜好"></a>喜好</h2><p>我们大多数人更容易答应自己认识的和喜欢的人提出的要求，但有一些我们完全不认识的人，想出来几百种利用这条原理的方法，让我们去响应他们请求。</p>
+<h2 id="特百惠的玩法"><a href="#特百惠的玩法" class="headerlink" title="特百惠的玩法"></a>特百惠的玩法</h2><p>特百惠是借聚会的名义卖产品的组织，主要营销方式是通过某个人给他朋友发起聚会要求，在聚会中购买商品，发起人将获得抽成。</p>
+<p>互惠： 特百惠一开始，玩游戏会得到奖品，没中奖的人可以从袋子里面抽一份礼物； 特百惠发起方能获得抽成。</p>
+<p>承诺一致： 要求每个人当众介绍自己发现特百惠某件商品的用途、好处</p>
+<p>社会认同： 每一笔交易都在强化这个商品大家都认为很好，每个人都在购买商品。</p>
+<p>喜好：社会纽带，朋友的关系让客户在决定购买意见时，考虑关系比考虑产品本身更强。</p>
+<p>这种玩法曾经帮助特百惠获得巨大的商业利益。</p>
+<h2 id="不在场的朋友对你的影响"><a href="#不在场的朋友对你的影响" class="headerlink" title="不在场的朋友对你的影响"></a>不在场的朋友对你的影响</h2><p>销售员上门推销时，提及是你朋友让我来找你的。只要客户有提及喜欢这个产品，销售员就请求客户提供一个可能喜欢这个产品的电话名单，这样这条销售路径就无穷尽了。</p>
+<p>这种情况下，在心智中，拒绝销售员等同于拒绝朋友。</p>
+<h2 id="简单的销售手法"><a href="#简单的销售手法" class="headerlink" title="简单的销售手法"></a>简单的销售手法</h2><ol>
+<li>公平的价格</li>
+<li>你喜欢的家伙（推销员）<br>这里我发现有个观察：像《极客时间》这种知识付费的平台，找黏性非常大的技术自媒体号，并降价促成交易，实际上也是用了这个原理。</li>
+</ol>
+<h2 id="喜欢你的理由"><a href="#喜欢你的理由" class="headerlink" title="喜欢你的理由"></a>喜欢你的理由</h2><ol>
+<li>好看的皮囊<br>自动给长得好看的人添加一些正面的特点：有才华、诚实、善良、聪明。更容易获得帮助；更容易说服别人。</li>
+<li>相似的点<br>相似的观点、背景、生活方式，我们更容易做出正面的回应<br>在销售中，有的销售员假装和你有相同的背景和兴趣，可以加大成交的概率。<br>具体操作如下：根据客户车上的蛛丝马迹，发现有野营器材，则会提起说一有空就去远离城市的地方<br>发现是外省车牌，则说自己也是那里的人，攀老乡的手法屡见不鲜</li>
+<li>年龄、宗教、立场、吸烟、槟榔、酒，都可能成为共同点。<br>这也是为什么很多销售抽烟喝酒打麻将，因为要有共同点。</li>
+<li>别人的恭维和奉承。</li>
+</ol>
+<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>我仔细思考了商超、互联网企业的玩法，上诉套路总是在不经意间出现，在商超中是不是经常被销售员说是老乡[奸笑]</p>
+<p>在人的交往中，为了让别人喜欢上自己，刻意装扮、正面回应、找共同点、恭维都是司空见惯的。</p>
+<p>在了解原理后，会更加理解他们的动机。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/06/606e2f772ee3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="码农Peter">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/05/06/606e2f772ee3/" class="post-title-link" itemprop="url">《影响力》第四章-社会认同</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-05-06 23:27:17" itemprop="dateCreated datePublished" datetime="2022-05-06T23:27:17+08:00">2022-05-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-05-30 09:36:46" itemprop="dateModified" datetime="2022-05-30T09:36:46+08:00">2022-05-30</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>我们就是真理</p>
+<h2 id="社会认同"><a href="#社会认同" class="headerlink" title="社会认同"></a>社会认同</h2><p>在判断是否正确，我们会根据别人的意见行事。</p>
+<h2 id="利用社会认同来牟利的行为有哪些？"><a href="#利用社会认同来牟利的行为有哪些？" class="headerlink" title="利用社会认同来牟利的行为有哪些？"></a>利用社会认同来牟利的行为有哪些？</h2><p>调酒师事先放几张票子，暗示小费</p>
+<p>慈善捐款、火锅店的自导自演排长队</p>
+<p>APP中按销量排序</p>
+<h2 id="有个极端的例子，芝加哥邪教"><a href="#有个极端的例子，芝加哥邪教" class="headerlink" title="有个极端的例子，芝加哥邪教"></a>有个极端的例子，芝加哥邪教</h2><p>第一阶段，邪教成员很少只有30个，且保持神秘，不发展教徒，避开媒体采访。</p>
+<p>某天预言地球会发生大洪水，有太空人会用飞碟把信徒带到另一个地球，信徒们纷纷辞去工作、散去家财等待这一天的道理。</p>
+<p>在预言这天信徒驱赶记者，避开采访，尽管里三层外三层地围着很多记者，是发展教徒的好时机。</p>
+<p>在这一天预言没有实现，大家情绪很低落，意识到预言不会成真。</p>
+<p>这时候收到新的预言：因为你们的努力，散发的光芒，让上帝拯救了世界免于毁灭。</p>
+<p>这个时候教派里的气氛突然180大转变。信徒开始非常热心地宣传教派传播福音。</p>
+<p>这里散尽家财和季度宣传福音都是被社会认同裹挟着，其实效果了耻辱感经济成本和别人的朝南都让人承受不起</p>
+<h2 id="多元无知效应"><a href="#多元无知效应" class="headerlink" title="多元无知效应"></a>多元无知效应</h2><p>纽约皇后发生了一起凶杀案，一个女士在35分钟内遭到了三次袭击，有38个目击者眼睁睁看着她，却没有一个人动动手。</p>
+<p>经过实验：当一个人倒在地上，只有一个人获救几率是75%，而如果是三个陌生人则只有38%，如果三个人中有两个是观察员，结果只有10%。</p>
+<p>在发生紧急事件，受害者被漠视的情况很多发生在大城市里面，一群陌生人亲眼目睹悲剧的发生。<br>因为</p>
+<ol>
+<li>大部分人都很难确定发生了什么</li>
+<li>大部分人在素不相识的陌生人面前不愿意流露出关切的表情，因为我们要表现的成熟</li>
+<li>我们在相互观察其他陌生人，结果所有人都不动了。<br>打破这个行为的是某个人终于忍不住了上前询问。</li>
+</ol>
+<h2 id="遇到多元无知效应怎么破解"><a href="#遇到多元无知效应怎么破解" class="headerlink" title="遇到多元无知效应怎么破解"></a>遇到多元无知效应怎么破解</h2><p>这种现象是很恐怖的，比如你心脏病犯了结果药就在包里，你无能为力，周围人眼睁睁看着你却不动。</p>
+<p>你要尽快指定一个人，发出明确的指令： 你，穿黑西装的哥们，帮我从包里拿一颗药。</p>
+<p>我们要趁自己还没倒下，告诉别人他们应该要做什么，消除他们的不确定性。</p>
+<h2 id="悲剧的产生"><a href="#悲剧的产生" class="headerlink" title="悲剧的产生"></a>悲剧的产生</h2><p>自杀的报道会导致有自杀倾向的人自杀，还记得富士康跳楼事件吗？</p>
+<p>邪教中910名教徒心甘情愿井然有序地赴死。</p>
+<p>股票作手不断做多做空，操纵人心，然后卖掉或买下低位筹码。</p>
+<p>在不确定的场景下，特别容易发生上诉的悲剧。</p>
+<h2 id="怎么避免被愚弄？"><a href="#怎么避免被愚弄？" class="headerlink" title="怎么避免被愚弄？"></a>怎么避免被愚弄？</h2><p>对明显伪造的证据，只需要保持多一点警惕，就能很好的保护自己。</p>
+<p>不要完全信任社会认同这种自动装置，哪怕没有坏蛋往里加错误信息。</p>
+<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>以身作则、言传身教就是社会认同，是能够影响一批人的</p>
+<p>在群体中大家做同一件事是不假思索的，同样的悲剧往往就发生了。股票、踩踏都是社会认同的副作用。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/21/3671f4e30d7c/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="码农Peter">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/04/21/3671f4e30d7c/" class="post-title-link" itemprop="url">《影响力》第三章-承诺与一致（二）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-04-21 23:53:33" itemprop="dateCreated datePublished" datetime="2022-04-21T23:53:33+08:00">2022-04-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-05-30 09:36:46" itemprop="dateModified" datetime="2022-05-30T09:36:46+08:00">2022-05-30</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>《影响力》第三章 承诺与一致（二）</p>
+<h2 id="「金句」：你的承诺是关键"><a href="#「金句」：你的承诺是关键" class="headerlink" title="「金句」：你的承诺是关键"></a>「金句」：你的承诺是关键</h2><h3 id="承诺一致的例子"><a href="#承诺一致的例子" class="headerlink" title="承诺一致的例子"></a>承诺一致的例子</h3><p>各行专家会诱导你做出表态或者采取某些行动，然后通过我们内心保持一致的压力逼我们顺从。</p>
+<p>有些直截了当，有些则比较隐晦。</p>
+<p>如：</p>
+<ol>
+<li>打电话请求参与募捐，结果到了那天志愿者真的比以前多七倍。</li>
+<li>比如让居民预测自己是否会在某一天投票，结果真的那一天这些人投票率大增。</li>
+<li>比如募捐，先问你身体是否好，大部分人都客套说好，然后再提出募捐请求，成功提高了两倍。</li>
+</ol>
+<h3 id="在军事中出现过的奇怪现象"><a href="#在军事中出现过的奇怪现象" class="headerlink" title="在军事中出现过的奇怪现象"></a>在军事中出现过的奇怪现象</h3><p>作者详细给我们描述了一个战俘里面发生了事情，战俘是如何出卖自己国家的？</p>
+<ol>
+<li>战俘管理人员对战俘进行谈话，从很小的地方开始说，比如你们国家不是所有的地方都好，然后请你列出哪些地方是不好的，并签上你的名字。</li>
+<li>一个个人谈话结束后，不断地组织你们进行讨论，进一步扩大这个清单</li>
+<li>最后通过广播的方式把你的清单播出来，这时候你突然意识到，哎？我跟你是敌对关系，结果我好像变成了你的合作者。</li>
+<li>这个时候为了一次性的原则，那你就只你会加入他们，提供相应的资料证明你做的没错。</li>
+</ol>
+<h3 id="思考和感想"><a href="#思考和感想" class="headerlink" title="思考和感想"></a>思考和感想</h3><p>我就想到职场上的管理人员想给一个员工打差绩效的时候，先问那个员工对着他的感觉怎么样。</p>
+<p>这个员工可能会谦虚一点说，哎呀好像今年没干好，好多要提升。这就好办了，让员工自己要说出不好的地方，然后再进一步的利用这一点给员工打低绩效。这时候员工的心理抵触能力也不会那么大。</p>
+<p>这是一种管理能力，有意识或者无意识地有效利用一些技巧，达成自己目的。</p>
+<p> <strong>作为员工该争取的时候还是要争取，该正面还是要正面。虽然大部分时候没什么用，但是态度积极就是最好的回应。</strong></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/21/37361f389eb5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="码农Peter">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/04/21/37361f389eb5/" class="post-title-link" itemprop="url">《影响力》第三章 承诺与一致（一）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-04-21 21:47:22" itemprop="dateCreated datePublished" datetime="2022-04-21T21:47:22+08:00">2022-04-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-05-30 09:36:46" itemprop="dateModified" datetime="2022-05-30T09:36:46+08:00">2022-05-30</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>第三章 承诺与一致（一）</p>
+<h2 id="奇怪的现象"><a href="#奇怪的现象" class="headerlink" title="奇怪的现象"></a>奇怪的现象</h2><p>一旦做出艰难的选择，人就很乐意相信自己选对了。我们一次次欺骗自己，以便在做出选择之后相信自己做的没错。</p>
+<p>保持前后一致的动力，是一种威力巨大的社会印象武器，它经常令我们作出明显有违最佳利益的行为。</p>
+<p>例子：</p>
+<p>赛马场赌徒在押注之前犹豫不决，但是当他押注之后，就对这匹马非常有信心。</p>
+<p>女子因为男友的问题离开了他，但是后来男友努力挽回并明确要改，她原谅了男友。但是男友反而变本加厉，这个时候女友反而更加爱他。因为这个女人要对自己的行为保持一致，即使欺骗自己也在所不惜。</p>
+<h2 id="这是为什么呢？"><a href="#这是为什么呢？" class="headerlink" title="这是为什么呢？"></a>这是为什么呢？</h2><ol>
+<li>信仰、言语和行为前后不一的人，会被看成是脑筋混乱、表里不一，甚至精神有毛病。</li>
+<li>另一方面言行高度一致大多与个性坚强、智力出众挂钩，是逻辑性、稳定性、诚实感的核心。</li>
+</ol>
+<p>大多数其他自动响应方式一样，为穿越复杂的现代生活提供了捷径。更容易避免误入歧途，遇到麻烦事可以让我们不用做棘手的抉择，逃避理性的折磨。</p>
+<h2 id="有例子吗？"><a href="#有例子吗？" class="headerlink" title="有例子吗？"></a>有例子吗？</h2><ol>
+<li>冥想讲师宣传他们的冥想课程，讲师被逻辑学教授驳斥地体无完肤，但是却更多人拿着钱走向了冥想讲师。命中了第二条，这些人想逃避理性的折磨，干脆交钱不思考了。</li>
+<li>玩具商在圣诞节前播放好玩玩具，但是不备足货，家长只能买同等价格的玩具。两个月后玩具商继续播放这个玩具广告，因为家长承诺过买这个玩具，只能乖乖过来买。</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/20/3350fb84ce7e/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="码农Peter">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/04/20/3350fb84ce7e/" class="post-title-link" itemprop="url">《影响力》第二章：互惠</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-04-20 19:31:04" itemprop="dateCreated datePublished" datetime="2022-04-20T19:31:04+08:00">2022-04-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-05-30 09:36:46" itemprop="dateModified" datetime="2022-05-30T09:36:46+08:00">2022-05-30</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="什么是互惠原则？"><a href="#什么是互惠原则？" class="headerlink" title="什么是互惠原则？"></a>什么是互惠原则？</h2><p>我们有义务在将来回报别人的好意、礼物和邀请。</p>
+<p>互惠是人类的巨大进步，人类可以帮助别人而不用担心收不回来，这为人类活动：救助、送礼、防卫、贸易奠定了基础。</p>
+<h2 id="互惠原则的应用？"><a href="#互惠原则的应用？" class="headerlink" title="互惠原则的应用？"></a>互惠原则的应用？</h2><p>克利须那协会通过赠送经书、杂志、鲜花，并坚决不肯收回的方式，提出捐款的请求，获得巨大的成功。</p>
+<h2 id="互惠其他应用："><a href="#互惠其他应用：" class="headerlink" title="互惠其他应用："></a>互惠其他应用：</h2><ol>
+<li>人情债，林登*约翰逊在众议院和参议院摸爬滚打帮了其他议员很多忙，所以当上总统后他的法案很容易就通过了。吉米卡特则恰恰相反，宣称不欠人情债结果法案总是难以通过。</li>
+<li>企业和个人愿意向司法和立法官员赠送礼物，选举的时候实际上也是囤积人情债。</li>
+<li>生活中，别人帮了你，下次他请求帮忙你是很难拒绝的；企业超市赠送免费样品；安利发放试用装；邪教通过特殊照顾控制他人。</li>
+</ol>
+<h2 id="强加的恩惠也能影响你吗？"><a href="#强加的恩惠也能影响你吗？" class="headerlink" title="强加的恩惠也能影响你吗？"></a>强加的恩惠也能影响你吗？</h2><p>哪怕被人硬塞了好处，也会让我们产生亏欠感。</p>
+<blockquote>
+<p>人有送礼的义务，接受的义务，更有偿还的义务————马塞尔·莫斯</p>
+<p>（想到了给官员送礼、教父中不收老裁缝的钱而是要和他做朋友、逢年过节的人情往来）</p>
+</blockquote>
+<p>警惕商场小礼物（地址标签、贺卡、钥匙环），旨在激发你的善意。</p>
+<p>在我们的文化里面，亏欠别人是很不愉快的，沉沉地压在我们身上，要求我们尽快把它消除。</p>
+<p>违背互惠原理，接受而不回报，是不受社会群体欢迎的。</p>
+<h2 id="互惠式让步是什么？为什么会是为力更大的方式？"><a href="#互惠式让步是什么？为什么会是为力更大的方式？" class="headerlink" title="互惠式让步是什么？为什么会是为力更大的方式？"></a>互惠式让步是什么？为什么会是为力更大的方式？</h2><p>拒绝——后撤 方式，先提一个大些的要求，一定会被拒绝的；在被拒绝后提一个小要求，这个要去才是真实目的。</p>
+<p>对于让步的人有回报的义务，人们乐意率先让步，从而启动有益的交换。</p>
+<p>第一个请求不要极端不合情理，真正有天分的谈判人员会把最初的立场稍微夸张，然后来一串的小小让步，从对方哪里得到理想的结果就行了。</p>
+<p>电视节目制作人故意在剧本上加一些一定会砍掉的台词，才能让自己真正想要的内容通过审查，</p>
+<p>拒绝————后撤手法不仅刺激人们答应要求，还鼓励他们切身时间承诺，甚至叫他们自愿履行进一步的要求。</p>
+<p>因为受试者认为是自己主动促成这个协议，导致他们更有责任感维护这个协议。</p>
+<h2 id="既然有人利用互惠进行获利，我们应该怎么避免自己受到伤害？"><a href="#既然有人利用互惠进行获利，我们应该怎么避免自己受到伤害？" class="headerlink" title="既然有人利用互惠进行获利，我们应该怎么避免自己受到伤害？"></a>既然有人利用互惠进行获利，我们应该怎么避免自己受到伤害？</h2><p>不能一概排斥，产生社会摩擦和孤立。</p>
+<p>如果提议我确实赞同，不妨接受它；如果这个提议必有所图，我们就置之不理。</p>
+<p>我们要做的是：重新定义他们给我带来的不是礼物，而是销售手法，就不会触发我的让步。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/16/156f1f2c8cb0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="码农Peter">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/04/16/156f1f2c8cb0/" class="post-title-link" itemprop="url">《影响力》（一）前言和第一章影响力的武器</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-04-16 22:45:01" itemprop="dateCreated datePublished" datetime="2022-04-16T22:45:01+08:00">2022-04-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-05-30 09:36:46" itemprop="dateModified" datetime="2022-05-30T09:36:46+08:00">2022-05-30</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="金句"><a href="#金句" class="headerlink" title="金句"></a>金句</h1><p>我想搞清楚，为什么相同的请求，按某种方式说出来会遭到拒绝，稍微换种方式说却会一帆风顺呢？</p>
+<h1 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>作者深度参与式观察销售员、广告、筹款家的活动，得出六种类型可以左右人的行为<br>互惠、承诺与一致、社会认同、喜好、权威、稀缺<br>在本书中新增了读者报告的栏目，形成了相互反馈。</p>
+<h2 id="第一章-影响力的武器"><a href="#第一章-影响力的武器" class="headerlink" title="第一章 影响力的武器"></a>第一章 影响力的武器</h2><p>火鸡被叽叽声音给影响了，发出这个声音会受到青睐，而不会发声的会受到攻击。</p>
+<h3 id="什么是固定行为模式？"><a href="#什么是固定行为模式？" class="headerlink" title="什么是固定行为模式？"></a>什么是固定行为模式？</h3><p>这种行为叫做固定行为模式，人类也同样有这种开关：</p>
+<ol>
+<li>请求插队，带上“因为”两个字，结果就从60%同意率升到了93%，即使没有说出缘由。</li>
+<li>在对物品质量拿捏不准的时候， 贵==好</li>
+</ol>
+<h3 id="固定行为模式存在的意义是什么？"><a href="#固定行为模式存在的意义是什么？" class="headerlink" title="固定行为模式存在的意义是什么？"></a>固定行为模式存在的意义是什么？</h3><p>人类这种行为是必要的，匹配模式，识别特征就立刻响应，能大大减少能量的消耗，并且在大部分的情况下是有效的。因为世界已经越来越复杂了，我们需要依赖捷径去解决它。<br>优惠券即使不生效，大家还是这么用它，就是因为通用认知是优惠券花更少钱；不需要脑力再次做决断。</p>
+<h3 id="被人利用的固定行为模式："><a href="#被人利用的固定行为模式：" class="headerlink" title="被人利用的固定行为模式："></a>被人利用的固定行为模式：</h3><p>寻常人不清楚这个规则，但是有些人看穿了，把这些规则当成触手可及武器，达成自己的意图。成功概率极高。<br>对体系结构进行设计、用社交环境把自己武装起来、用一个恰当的字眼，触发人们的自动行为。<br>比如先用高价吸引贵==好的买家，然后用降价吸引淘便宜货的买家。</p>
+<h3 id="固定行为模式的描述是什么样的？"><a href="#固定行为模式的描述是什么样的？" class="headerlink" title="固定行为模式的描述是什么样的？"></a>固定行为模式的描述是什么样的？</h3><ol>
+<li>机械化的反应</li>
+<li>只要一个词语，一个巧劲就可触发，获得渔利</li>
+<li>使用者借助这个能力能让一个人乖乖就范。</li>
+</ol>
+<h3 id="还有什么固定模式？"><a href="#还有什么固定模式？" class="headerlink" title="还有什么固定模式？"></a>还有什么固定模式？</h3><p>对比原理：先拿轻的东西，再拿重的东西，你会觉得东西比本身重。<br>在现实中的应用有：</p>
+<ol>
+<li>卖东西，先给顾客展示贵的商品，然后展示相对便宜的商品。</li>
+<li>房屋中介先展示破烂且贵的房子，再展示想要你购买的房子。</li>
+<li>汽车经销商谈妥车的价格后，再把其他小部件小服务的价格展示出来，显得微不足道，但实际上贵了很多。</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/16/5ffac549fda3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="码农Peter">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/04/16/5ffac549fda3/" class="post-title-link" itemprop="url">GROW模型</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-04-16 22:21:09" itemprop="dateCreated datePublished" datetime="2022-04-16T22:21:09+08:00">2022-04-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-17 22:03:57" itemprop="dateModified" datetime="2022-04-17T22:03:57+08:00">2022-04-17</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="GROW简述"><a href="#GROW简述" class="headerlink" title="GROW简述"></a>GROW简述</h2><p>GROW模型是约翰*惠特默在1992年提出的，在企业教练中广泛使用的模型。</p>
+<p>模型基于决策的四个阶段：目标、现实、选择、意愿。</p>
+<p>对于我的意义是：帮助自己帮助他人设定目标、理清现实、制定合理计划、建立责任机制，是一个目标达成初次创作。</p>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>目的</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Goal：目标</td>
+<td>期望的成果是什么</td>
+</tr>
+<tr>
+<td>Reality: 现实</td>
+<td>挖掘真相、澄清、理解</td>
+</tr>
+<tr>
+<td>Option：选择</td>
+<td>探寻备选方案、征询建议</td>
+</tr>
+<tr>
+<td>Will: 意愿</td>
+<td>阐明行动计划、设立衡量标准、规定分工角色、建立自我责任</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="GROW模型使用"><a href="#GROW模型使用" class="headerlink" title="GROW模型使用"></a>GROW模型使用</h2><p>基于GROW模型，有简单的使用方法，就是提问</p>
+<p>在提问的时候需要注意：</p>
+<ol>
+<li>不要评判目标</li>
+<li>你只负责提问、不负责解答</li>
+<li>好坏的标准在于被提问者是否深思</li>
+</ol>
+<p>下面是具体的提问内容</p>
+<table>
+<thead>
+<tr>
+<th align="center">Goal</th>
+<th>你最想实现的是什么？</th>
+<th align="center">答案</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"></td>
+<td>你希望自己的工作变成什么样？</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>你设想一下，你觉得最美好的工作状态是什么感觉？</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>你要实现什么目标？</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>具体的目标是什么？</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>有什么具体的指标吗？</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>打算什么时候实现？</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>实现目标的标志是什么？</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>如果需要量化的话，拿什么量化你的目标？</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">REALITY</th>
+<th>那么，现状是什么？</th>
+<th align="center">答案</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"></td>
+<td>哪些事让你特别心烦？</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>你都做过哪些努力？效果如何？</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>都有谁与此相关？（重要）</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>他们分别持什么样的态度？</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>你自己曾经做过什么努力来改变这些东西？</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>跟你有关系的原因有哪些？</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>目前的状况怎样</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>你如何知道这是准确的信息（重要）</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>这是什么时候发生的</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>这种情况发生的频率如何</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>你都做了些什么去实现目标</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>是什么原因阻止你不能实现目标</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>在目标不能实现的时候你有什么感觉</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>你都试着采取过哪些行动</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">OPTIONS</th>
+<th>你有哪些选择、办法来解决这个问题？</th>
+<th align="center">答案</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"></td>
+<td>在相似或相同的情况下，你听过别人用什么样的办法来解决这个问题吗？</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>还有别的办法吗？</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>为改变目前的情况，你能做什么</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>可供选择的方法有哪些</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>你曾经见过或听说过别人有哪些做法</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>哪一种选择你认为是最有可能成功的</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>如果……会发生什么</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>这些选择的优缺点是什么</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>请陈述你觉得采取行动的可能性，打分</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>如果调整哪个指标，可以提高行动的可能性</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>如果你这样做了，后果是什么？</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">WILL</th>
+<th>你打算怎么做？</th>
+<th align="center">答案</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"></td>
+<td>何时是你采取下一步的最好时机？</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>下一步的行动是什么？</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>你还需要谁对你的帮助和支持？</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>还有哪些资源是必须的？</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>可能遇到的障碍是什么</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>你需要什么支持</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>谁可能对此有帮助</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>你何时需要支持，以及如何获得支持</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/16/77a4dc6f1bb0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="码农Peter">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/04/16/77a4dc6f1bb0/" class="post-title-link" itemprop="url">钟南山采访</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-04-16 22:19:42" itemprop="dateCreated datePublished" datetime="2022-04-16T22:19:42+08:00">2022-04-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-17 22:03:57" itemprop="dateModified" datetime="2022-04-17T22:03:57+08:00">2022-04-17</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="采访内容"><a href="#采访内容" class="headerlink" title="采访内容"></a>采访内容</h2><p>今天在家看钟南山钟老的采访，讲了很多经历：<br>八十年代公派去英国留学，国家给的补贴比较少（吃饭住宿免费，一个月发6英镑，理个发12英镑），这是大背景。<br>外国教授普遍对中国人印象不好，像看原始人一样看待中国人。国外教授觉得中国学者能力差、语言不顺，很多同学生病了只能回去医治，大家压力很大，而钟老当时是队长。大家也只能相互鼓励，随着慢慢熟悉，钟老做出了一些成绩。</p>
+<ol>
+<li>在临床上提出一个方案，有效果，让国外学者开始关注他</li>
+<li>在研究的方向上，帮导师完善了数据（他导师是算公式去算，而他是去测量，不够人就找朋友，从自己身上抽血验证），开始走向了学术视野。</li>
+<li>在研究方向上，依靠临床经验纠正了一个很有权威的教授的数据，并在次年把原文发布到了世界权威的机构，奠定了自己的学术地位。</li>
+</ol>
+<h2 id="有些细节"><a href="#有些细节" class="headerlink" title="有些细节"></a>有些细节</h2><p>上诉是能查到的经验，但是有些细节很有意思。</p>
+<ol>
+<li>为了和同事打好关系，和同事打羽毛球，教同事蝶泳（钟老本身是打破了400米运动的记录的运动员）。</li>
+<li>实事求是的态度很重要，尤其是医生。否定SARS是衣原体、亲赴武汉观察新冠，从收集到的材料到亲眼所见，给出自己谨慎的判断。</li>
+<li>远大的理想，他说虽然父亲是儿科医生对他有一定影响，但是最重要的还是要有抱负。如果一个人有理想，他再忙精神状态也是非常好的。如果一个人突然完成了梦想，马上老得很快。钟老的梦想还是攻破慢阻肺和癌症，有理想真的了不起。<h2 id="我的理想"><a href="#我的理想" class="headerlink" title="我的理想"></a>我的理想</h2>我关注的是这些，可是我自己却空了，这段时间忙的很，停下来后突然无所事事。<br>我的理想是什么？</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/22/50c16aafb237/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="码农Peter">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/12/22/50c16aafb237/" class="post-title-link" itemprop="url">需求技术评审checklist</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-12-22 18:00:00" itemprop="dateCreated datePublished" datetime="2021-12-22T18:00:00+08:00">2021-12-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-17 22:03:57" itemprop="dateModified" datetime="2022-04-17T22:03:57+08:00">2022-04-17</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>需求技术评审，主要评审业务本身是否清晰，在数据层能不能支持，在系统内部是否能形成闭环，本迭代的能力能否完成。</p>
+<h2 id="业务本身"><a href="#业务本身" class="headerlink" title="业务本身"></a>业务本身</h2><ol>
+<li>怎么展示：正常、数据多、数据少、数据空、无权限、是否翻页</li>
+<li>怎么交互：站在用户角度，交互是否清晰准确，能否理解</li>
+<li>本次业务对现有业务的影响：会不会开新口子导致无法闭环</li>
+<li>本次业务能否自己形成闭环：可要求查看后台配置页面</li>
+</ol>
+<h2 id="数据操作"><a href="#数据操作" class="headerlink" title="数据操作"></a>数据操作</h2><ol>
+<li>展示的数据来源是哪里</li>
+<li>操作后数据是怎么存储、怎么被其他人使用的</li>
+<li>新老版本APP是如何兼容的</li>
+</ol>
+<h2 id="第三方依赖"><a href="#第三方依赖" class="headerlink" title="第三方依赖"></a>第三方依赖</h2><ol>
+<li>APP与PC迭代进度，团队之间依赖对齐</li>
+<li>本次业务是否有第三方工具，是否已经预研、购买、接入</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/14/cb7376238656/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="码农Peter">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/11/14/cb7376238656/" class="post-title-link" itemprop="url">精准曝光组件介绍</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-11-14 18:00:00" itemprop="dateCreated datePublished" datetime="2021-11-14T18:00:00+08:00">2021-11-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-17 22:03:57" itemprop="dateModified" datetime="2022-04-17T22:03:57+08:00">2022-04-17</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>近期有个需求，当一个组件在可视区中间80%范围内出现3S，即上传曝光。组件移出页面再已入，需要再次按规则曝光。</p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><ol>
+<li>因为tableview 和 scrollview 有复用机制，需要考虑曝光对象维护问题，为防止乱，用数据 id作为唯一标识。</li>
+<li>手机资源紧缺，需要共用一个计时器</li>
+<li>为了效率问题，需要在多线程上执行曝光逻辑</li>
+</ol>
+<h2 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h2><ol>
+<li>使用基础的数组和字典，存储唯一数据id和曝光时间</li>
+<li>使用累积的方式计算曝光时间</li>
+<li>使用全局唯一定时器触发更新曝光时间</li>
+<li>使用多个线程用于计算、曝光、移除、增加曝光时间。另起一个线程调度多线程计算</li>
+</ol>
+<h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">PageMap&lt;pageName:String, eventMap:EventMap&gt;</span><br><span class="line">TrackMap&lt;eventName:String, dataMap:DataMap&gt;</span><br><span class="line">DataMap&lt;dataId:String, DataObject&gt;</span><br><span class="line"></span><br><span class="line">DataObject: &#123;</span><br><span class="line">  &quot;view&quot;: &quot;组件引用地址&quot;,</span><br><span class="line">  &quot;time&quot;: 0</span><br></pre></td></tr></table></figure>
+
+
+
+<p>每次由组件触发加载数据，则找到page_name, 再找到component_name, 生成一个data_id1: object的节点。</p>
+<p>如果在屏幕上，则设置time为0；如果组件不在屏幕上，则直接把时间设置为10s</p>
+<h3 id="调度"><a href="#调度" class="headerlink" title="调度"></a>调度</h3><p>创建常驻Timer，用于调度定时器</p>
+<p>在多线程上执行操作曝光逻辑。</p>
+<h3 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h3><p><img src="https://s2.loli.net/2022/04/16/YyBx4A3D7kuOm9g.png" alt="expose-progress"></p>
+<h2 id="Product"><a href="#Product" class="headerlink" title="Product"></a>Product</h2><p>github地址： <a target="_blank" rel="noopener" href="https://github.com/suiming/PetersLab">suiming/PetersLab (github.com)</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Peter</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">43</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/suiming" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;suiming" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:suiming.jx@gmail.com" title="E-Mail → mailto:suiming.jx@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/xuzhuread" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;xuzhuread" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Peter</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+</body>
+</html>

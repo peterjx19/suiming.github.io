@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/favicon.ico" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="分析阅读第一阶段规则一：这本书的种类和主题是什么？ 是实用性还是理论性 规则二：使用单一的句子，或最多几句话叙述整本书的内容 规则三：将书中重要篇章列举出来，说明他们如何按照顺序组成一个整体架构。写作是有纲要后，在架构上铺设血肉，尽量把纲要隐藏起来，给全书增添必要的空间和深度。 规则四：找出作者要问的问题 分析阅读第二阶段规则五：找到关键字，通过他们于作者达成共识 如几何原理的「点」「线」「面」，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《如何阅读一本书》(三)分析阅读的三阶段和阅读目标">
+<meta property="og:url" content="http://example.com/2022/05/17/354de0aa72cd/index.html">
+<meta property="og:site_name" content="码农Peter">
+<meta property="og:description" content="分析阅读第一阶段规则一：这本书的种类和主题是什么？ 是实用性还是理论性 规则二：使用单一的句子，或最多几句话叙述整本书的内容 规则三：将书中重要篇章列举出来，说明他们如何按照顺序组成一个整体架构。写作是有纲要后，在架构上铺设血肉，尽量把纲要隐藏起来，给全书增添必要的空间和深度。 规则四：找出作者要问的问题 分析阅读第二阶段规则五：找到关键字，通过他们于作者达成共识 如几何原理的「点」「线」「面」，">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-05-17T13:56:30.000Z">
+<meta property="article:modified_time" content="2022-05-30T01:36:46.458Z">
+<meta property="article:author" content="Peter">
+<meta property="article:tag" content="读书笔记">
+<meta property="article:tag" content="《如何阅读一本书》">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2022/05/17/354de0aa72cd/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>《如何阅读一本书》(三)分析阅读的三阶段和阅读目标 | 码农Peter</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">码农Peter</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">太卷？读书破万卷</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-主页">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>主页</a>
+
+  </li>
+        <li class="menu-item menu-item-标签">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-分类">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-归档">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/17/354de0aa72cd/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="码农Peter">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          《如何阅读一本书》(三)分析阅读的三阶段和阅读目标
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-05-17 21:56:30" itemprop="dateCreated datePublished" datetime="2022-05-17T21:56:30+08:00">2022-05-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-05-30 09:36:46" itemprop="dateModified" datetime="2022-05-30T09:36:46+08:00">2022-05-30</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="分析阅读第一阶段"><a href="#分析阅读第一阶段" class="headerlink" title="分析阅读第一阶段"></a>分析阅读第一阶段</h1><p>规则一：这本书的种类和主题是什么？ 是实用性还是理论性</p>
+<p>规则二：使用单一的句子，或最多几句话叙述整本书的内容</p>
+<p>规则三：将书中重要篇章列举出来，说明他们如何按照顺序组成一个整体架构。<br>写作是有纲要后，在架构上铺设血肉，尽量把纲要隐藏起来，给全书增添必要的空间和深度。</p>
+<p>规则四：找出作者要问的问题</p>
+<h1 id="分析阅读第二阶段"><a href="#分析阅读第二阶段" class="headerlink" title="分析阅读第二阶段"></a>分析阅读第二阶段</h1><p>规则五：找到关键字，通过他们于作者达成共识</p>
+<p>如几何原理的「点」「线」「面」，财富论里的劳工、资本、土地、薪资、利润。需要明确地、逐字逐句的理解清楚。</p>
+<p>规则六：从最重要的句子中抓出作者的主旨</p>
+<ol>
+<li>作者标注的句子；</li>
+<li>你读起来很困惑的句子；</li>
+<li>在仔细分析后，要用自己的话让别人也明白。</li>
+</ol>
+<p>规则七：找出作者的论述，重新架构这些论述的前应后果</p>
+<p>一个或多个特殊事实证明共通的概念是归纳法；</p>
+<p>连贯的通则证明进一步的概念是演绎法</p>
+<p>规则八：确认作者已经解决了什么问题？还有哪些是未解决的？</p>
+<p>哪些是作者认为无法解决的</p>
+<h1 id="分析阅读的第三个阶段：像沟通知识一样评论一本书"><a href="#分析阅读的第三个阶段：像沟通知识一样评论一本书" class="headerlink" title="分析阅读的第三个阶段：像沟通知识一样评论一本书"></a>分析阅读的第三个阶段：像沟通知识一样评论一本书</h1><p>九：除非完成了大纲架构阅读，并能读懂了整本书，否则不要轻易评论。</p>
+<p>批评之前，应该对整本书都了解透彻。</p>
+<p>十：不要陷入情绪和偏见，虽然这无可避免，不要争强好胜。</p>
+<p>我们的目标是增进知识，而不是取得胜利。</p>
+<p>十一：说出评论时，要证明自己能够区别出知识和个人观点的不同。</p>
+<p>知识是能够被证实大家认可的，观点是每个人的想法。</p>
+<h1 id="批评作者观点的要求："><a href="#批评作者观点的要求：" class="headerlink" title="批评作者观点的要求："></a>批评作者观点的要求：</h1><p>十二：证明作者知识的不足。</p>
+<p>针对作者提出问题的解法中，作者缺失了哪块的知识，与解决方法强相关。</p>
+<p>十三：证明作者知识的错误</p>
+<p>在作者论述中的某一条，本身是错误的，导致整个推导是错误的。</p>
+<p>十四：证明知识的不合逻辑</p>
+<p>作者未合理的使用逻辑关系：如必要条件变成充分条件、整体和局部的不合理替换。</p>
+<p>十五：证明作者分析和理由是不完整的。</p>
+<p>作者的分析和理由，和作者想要解决的问题不相关。</p>
+<h1 id="辅助工具："><a href="#辅助工具：" class="headerlink" title="辅助工具："></a>辅助工具：</h1><p>一、导读和摘要：</p>
+<p>导读和摘要可能是错误的，不完整的，所以我们要在自己完成阅读后再去看导读和摘要</p>
+<p>正确的做法是：在我们读过这本书，用导读和摘要唤起我们的回忆；在主题阅读时，查看是否和主题相关。</p>
+<p>二、字典：文字是物质的；文字是语言的一部分；文字是符号的；文字是约定俗成的。</p>
+<p>三、百科：事实是一种说法；一种证实的说法；真相的反映；某种程度上的约定俗成。</p>
+<h1 id="阅读的目标："><a href="#阅读的目标：" class="headerlink" title="阅读的目标："></a>阅读的目标：</h1><p>许多作品是有关联的，他们是基础、中级、高阶的关系。</p>
+<p>同时也有许多作品是有时间顺序的，他们之前是连贯的。如哲学作者，即是作者也是读者。</p>
+<p>通过努力地阅读，读者达到和作者同一个水平，他们应该能够平等对话。</p>
+<p>如何说一个人读书读的好，应该偏重质而非量，好书可以一遍一遍地读，而有些书只需要随便翻翻就可以了。</p>
+<p>温故而知新，可以为师矣，在某一领域反复读和揣摩，你自然可以变成这一领域的资深乃至专家。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="tag"># 读书笔记</a>
+              <a href="/tags/%E3%80%8A%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6%E3%80%8B/" rel="tag"># 《如何阅读一本书》</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/05/17/140fab03e2a2/" rel="prev" title="《如何阅读一本书》(二)阅读速度原则、怎么消化一本书、阅读误区">
+      <i class="fa fa-chevron-left"></i> 《如何阅读一本书》(二)阅读速度原则、怎么消化一本书、阅读误区
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/05/17/53c3f0b2e3b9/" rel="next" title="《如何阅读一本书》(四)主题阅读">
+      《如何阅读一本书》(四)主题阅读 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%86%E6%9E%90%E9%98%85%E8%AF%BB%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5"><span class="nav-number">1.</span> <span class="nav-text">分析阅读第一阶段</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%86%E6%9E%90%E9%98%85%E8%AF%BB%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5"><span class="nav-number">2.</span> <span class="nav-text">分析阅读第二阶段</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%86%E6%9E%90%E9%98%85%E8%AF%BB%E7%9A%84%E7%AC%AC%E4%B8%89%E4%B8%AA%E9%98%B6%E6%AE%B5%EF%BC%9A%E5%83%8F%E6%B2%9F%E9%80%9A%E7%9F%A5%E8%AF%86%E4%B8%80%E6%A0%B7%E8%AF%84%E8%AE%BA%E4%B8%80%E6%9C%AC%E4%B9%A6"><span class="nav-number">3.</span> <span class="nav-text">分析阅读的第三个阶段：像沟通知识一样评论一本书</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%89%B9%E8%AF%84%E4%BD%9C%E8%80%85%E8%A7%82%E7%82%B9%E7%9A%84%E8%A6%81%E6%B1%82%EF%BC%9A"><span class="nav-number">4.</span> <span class="nav-text">批评作者观点的要求：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7%EF%BC%9A"><span class="nav-number">5.</span> <span class="nav-text">辅助工具：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%98%85%E8%AF%BB%E7%9A%84%E7%9B%AE%E6%A0%87%EF%BC%9A"><span class="nav-number">6.</span> <span class="nav-text">阅读的目标：</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Peter</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">43</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/suiming" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;suiming" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:suiming.jx@gmail.com" title="E-Mail → mailto:suiming.jx@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/xuzhuread" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;xuzhuread" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Peter</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'd98b64aad8f6c8a6ed97',
+      clientSecret: '4485ff70be66c3cdb51c774a56ce40e7d50a9ae9',
+      repo        : 'suiming.github.io',
+      owner       : 'suiming',
+      admin       : ['suiming'],
+      id          : 'b38e25e80140b4fa00bda6db672b910a',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>

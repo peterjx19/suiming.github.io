@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/favicon.ico" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="因为经历需要反复看，而这块内容又较多。笔记不会做的很细，大背景会总结，作者做的决策会详细记录。 桥水和计算机的合作方式作者用计算机获得了当前价格是高估还是低估，但是无法预知到何时买入何时卖出合理。所以作者把它的决策表混写下来，转化成公式，用这些公式计算历史数据，看效果如何。依次引导作者改进他的标准，使之成为永恒和普适的标准桥水的利率、股票、外汇、贵金属系统都是这么产生的。 作者和计算机是相互成长，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《原则》作者经历(四)">
+<meta property="og:url" content="http://example.com/2022/07/18/5c411776e762/index.html">
+<meta property="og:site_name" content="码农Peter">
+<meta property="og:description" content="因为经历需要反复看，而这块内容又较多。笔记不会做的很细，大背景会总结，作者做的决策会详细记录。 桥水和计算机的合作方式作者用计算机获得了当前价格是高估还是低估，但是无法预知到何时买入何时卖出合理。所以作者把它的决策表混写下来，转化成公式，用这些公式计算历史数据，看效果如何。依次引导作者改进他的标准，使之成为永恒和普适的标准桥水的利率、股票、外汇、贵金属系统都是这么产生的。 作者和计算机是相互成长，">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-18T12:04:26.000Z">
+<meta property="article:modified_time" content="2022-09-29T00:57:56.960Z">
+<meta property="article:author" content="Peter">
+<meta property="article:tag" content="读书笔记">
+<meta property="article:tag" content="《原则》">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2022/07/18/5c411776e762/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>《原则》作者经历(四) | 码农Peter</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">码农Peter</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">太卷？读书破万卷</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-主页">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>主页</a>
+
+  </li>
+        <li class="menu-item menu-item-标签">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-分类">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-归档">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/07/18/5c411776e762/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="码农Peter">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          《原则》作者经历(四)
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-07-18 20:04:26" itemprop="dateCreated datePublished" datetime="2022-07-18T20:04:26+08:00">2022-07-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-29 08:57:56" itemprop="dateModified" datetime="2022-09-29T08:57:56+08:00">2022-09-29</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>因为经历需要反复看，而这块内容又较多。笔记不会做的很细，大背景会总结，作者做的决策会详细记录。</p>
+<h1 id="桥水和计算机的合作方式"><a href="#桥水和计算机的合作方式" class="headerlink" title="桥水和计算机的合作方式"></a>桥水和计算机的合作方式</h1><p>作者用计算机获得了当前价格是高估还是低估，但是无法预知到何时买入何时卖出合理。<br>所以作者把它的决策表混写下来，转化成公式，用这些公式计算历史数据，看效果如何。<br>依次引导作者改进他的标准，使之成为永恒和普适的标准<br>桥水的利率、股票、外汇、贵金属系统都是这么产生的。</p>
+<h2 id="作者和计算机是相互成长，对两种结果对比，当结果不一致检查原因，弥补自己的某些东西；同时也不断输入新的标准，"><a href="#作者和计算机是相互成长，对两种结果对比，当结果不一致检查原因，弥补自己的某些东西；同时也不断输入新的标准，" class="headerlink" title="作者和计算机是相互成长，对两种结果对比，当结果不一致检查原因，弥补自己的某些东西；同时也不断输入新的标准，"></a>作者和计算机是相互成长，对两种结果对比，当结果不一致检查原因，弥补自己的某些东西；同时也不断输入新的标准，</h2><p>计算机精确、快、不受情绪干扰、记忆超群，通过校验作者和同事的标准，桥水获得飞速的发展。<br>计算机在想象力、理解力、逻辑能力不具备能力。<br>桥水不预测经济环境发生的变化去调整投资组合，而是在变化发生时捕捉它们，不断调整桥水的投资对象。<br>这种合作关系，减轻了繁重的工作，并获得了良好的效果。</p>
+<h1 id="桥水的业务："><a href="#桥水的业务：" class="headerlink" title="桥水的业务："></a>桥水的业务：</h1><ol>
+<li>付费咨询服务<br>全身心投入一家企业运营，就像我提出的策略是我亲自运营做出的决策一样</li>
+<li>管理企业风险获得奖励</li>
+<li>出售打包研究服务</li>
+</ol>
+<h2 id="为复兴做的创新和努力"><a href="#为复兴做的创新和努力" class="headerlink" title="为复兴做的创新和努力"></a>为复兴做的创新和努力</h2><p>把公司拆分为多个逻辑单元，用各种金融工具管理每一部分。<br>区分核心业务利润、价格变化的投机利润和亏损。<br>展示「风险中立」仓位（贝塔收益），同时对市场「阿尔法』进行管理，已获得更多的收益</p>
+<h2 id="工作目的："><a href="#工作目的：" class="headerlink" title="工作目的："></a>工作目的：</h2><p>不愿意因为投资产品卖得好而设计。<br>作者想要的是进行市场交易、建立人际关系、设身处地为客户服务<br>见识新奇的东西、革命性的东西。 管理企业的利率和货币风险敞口。<br>桥水的运营策略是持有现金和20年国债转换，利率承压将导致利率下降时就持有国债；利率上升就持有现金。</p>
+<h2 id="桥水和世界的互动"><a href="#桥水和世界的互动" class="headerlink" title="桥水和世界的互动"></a>桥水和世界的互动</h2><p>在中国的“关闭的大门”背后探险<br>1994年成立桥水中国合作伙伴，给投资客户介绍机会，也把中国企业介绍给美国企业，提供专业知识。<br>因为任务复杂性和桥水本身的事务冲突，导致该公司关闭，无盈利也无亏损。</p>
+<p>通过和中国、新加坡、俄罗斯、欧洲的政府打交道，作者的经验、看问题角度、提供帮助构成了巨大的回报。<br>和有趣的地方有趣的人、经济领导人、企业家、土著人沟通，通过他们的研究看世界，学习从不同角度看待生活。<br>作者理解到，保持足够的好奇心，始终愿意去理解看问题和你不一样的人是怎么形成他们看问题的方式，有趣也将受益无穷，获得丰富的视角。</p>
+<h1 id="我的家庭"><a href="#我的家庭" class="headerlink" title="我的家庭"></a>我的家庭</h1><p>在扩大规模的过程中，没有把任何与我共事的人当成雇员。<br>作者希望过上充满意义的工作和有意义的人际关系，人们彼此坦诚相待。<br>作者认为组织中有两种人：视工作为使命的一部分；为薪水工作的人。<br>直言相告、坦诚，为追求最好的东西而奋斗使所有人都获益。</p>
+<h2 id="经济与市场发生更多的剧烈动荡"><a href="#经济与市场发生更多的剧烈动荡" class="headerlink" title="经济与市场发生更多的剧烈动荡"></a>经济与市场发生更多的剧烈动荡</h2><p>1987年10月19日黑色星期五做空股票，得到了大家的关注。<br>而1988年我们有指数系统捕捉经济面、技术面分析系统，如果两者一致系统会出现强烈型号<br>1988年没有动荡导致我们收益不好，促使用更好的价值衡量和风险控制取代技术面分析<br>1988年可以使用可变性的系统，根据信心程度押注规模。<br>作者在这里的结论是：<br>投资者和策略有弱点，弱点呈现就失去信息，就像有效时过于迷恋一样，大部分人都会有情绪化倾向。<br>不仅在投资如此，在对人和事物的关系同样适用：明智的人在经历沉浮后盯着文件的基本面，而轻浮的人跟着感觉走，一拥而上或一哄而散。</p>
+<h2 id="桥水的下一个立足点"><a href="#桥水的下一个立足点" class="headerlink" title="桥水的下一个立足点"></a>桥水的下一个立足点</h2><p>作者更加看中个性、创造力、常识感，认为把事情探究明白比拥有如何做事情的具体知识更重要。<br>创新性的用拆解成不同组成部分，用资产组合工程理念管理风险。</p>
+<h2 id="发现投资的圣杯"><a href="#发现投资的圣杯" class="headerlink" title="发现投资的圣杯"></a>发现投资的圣杯</h2><p>偶然发现适度的多样化，相互补充、相互平衡的资产组合，能够比单一来源的收益稳定的多、可靠地多。<br>几十年前的经济学诺贝尔得主 哈里*马科维兹构建了一个广泛应用的模型，将资产组合和预期回报、风险、相关性输入模型，<br>确定一个由这些资产组成的最优组合。<br>但是这个模型没有随着变量渐进变化后的效果如何，作者通过找到数学系学生帮忙制作图表解决这个问题。</p>
+<h3 id="发现这个规律后，作者的看法是："><a href="#发现这个规律后，作者的看法是：" class="headerlink" title="发现这个规律后，作者的看法是："></a>发现这个规律后，作者的看法是：</h3><p>想要拥有很多优势，而又不暴露在不可接受的劣势之下，最稳妥的方式是做出一系列良好的、互补相关的押注，彼此平衡，相互补充。</p>
+<h3 id="把我们从错误中总结的教训系统化"><a href="#把我们从错误中总结的教训系统化" class="headerlink" title="把我们从错误中总结的教训系统化"></a>把我们从错误中总结的教训系统化</h3><p>因为工作失误，导致产生损失，但是需要确保问题根源得到剖析，才能得到持续的改进。<br>基于吃，要求采用问题日志的做法，出了问题必须写入日志，写明严重程度，写清楚谁为之负责。</p>
+<h3 id="人事管理问题"><a href="#人事管理问题" class="headerlink" title="人事管理问题"></a>人事管理问题</h3><p>让人觉得不能胜任工作、可有可无、被羞辱、不堪重负、被压迫。<br>作者在岔道口需要做出抉择：1. 要对人保持季度真诚，把问题摆到明面上 2. 拥有快乐满意的员工。<br>分析后发现密切的员工理解作者、不讨厌，但是不太密切的人会感到冒犯。<br>所以做了这三件事：<br>真实想法摆在桌面<br>深思熟虑的分歧，在愿意相互了解的过程中更改观点<br>分歧还存在，用一致统一的决策方式<br>背后的原理是：逻辑脑和情绪脑的冲突在争夺你的控制权。<br>逻辑脑能轻易了解自身弱点是好事， 情绪脑则讨厌这么做。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="tag"># 读书笔记</a>
+              <a href="/tags/%E3%80%8A%E5%8E%9F%E5%88%99%E3%80%8B/" rel="tag"># 《原则》</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/07/18/d5c25303d5a0/" rel="prev" title="作者经历(三)">
+      <i class="fa fa-chevron-left"></i> 作者经历(三)
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/07/18/91a9e6a217c8/" rel="next" title="《原则》原则(一)拥抱现实，应对现实">
+      《原则》原则(一)拥抱现实，应对现实 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A1%A5%E6%B0%B4%E5%92%8C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%90%88%E4%BD%9C%E6%96%B9%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">桥水和计算机的合作方式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%9C%E8%80%85%E5%92%8C%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%AF%E7%9B%B8%E4%BA%92%E6%88%90%E9%95%BF%EF%BC%8C%E5%AF%B9%E4%B8%A4%E7%A7%8D%E7%BB%93%E6%9E%9C%E5%AF%B9%E6%AF%94%EF%BC%8C%E5%BD%93%E7%BB%93%E6%9E%9C%E4%B8%8D%E4%B8%80%E8%87%B4%E6%A3%80%E6%9F%A5%E5%8E%9F%E5%9B%A0%EF%BC%8C%E5%BC%A5%E8%A1%A5%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9F%90%E4%BA%9B%E4%B8%9C%E8%A5%BF%EF%BC%9B%E5%90%8C%E6%97%B6%E4%B9%9F%E4%B8%8D%E6%96%AD%E8%BE%93%E5%85%A5%E6%96%B0%E7%9A%84%E6%A0%87%E5%87%86%EF%BC%8C"><span class="nav-number">1.1.</span> <span class="nav-text">作者和计算机是相互成长，对两种结果对比，当结果不一致检查原因，弥补自己的某些东西；同时也不断输入新的标准，</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A1%A5%E6%B0%B4%E7%9A%84%E4%B8%9A%E5%8A%A1%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">桥水的业务：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E5%A4%8D%E5%85%B4%E5%81%9A%E7%9A%84%E5%88%9B%E6%96%B0%E5%92%8C%E5%8A%AA%E5%8A%9B"><span class="nav-number">2.1.</span> <span class="nav-text">为复兴做的创新和努力</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E7%9B%AE%E7%9A%84%EF%BC%9A"><span class="nav-number">2.2.</span> <span class="nav-text">工作目的：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A1%A5%E6%B0%B4%E5%92%8C%E4%B8%96%E7%95%8C%E7%9A%84%E4%BA%92%E5%8A%A8"><span class="nav-number">2.3.</span> <span class="nav-text">桥水和世界的互动</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E5%AE%B6%E5%BA%AD"><span class="nav-number">3.</span> <span class="nav-text">我的家庭</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%8F%E6%B5%8E%E4%B8%8E%E5%B8%82%E5%9C%BA%E5%8F%91%E7%94%9F%E6%9B%B4%E5%A4%9A%E7%9A%84%E5%89%A7%E7%83%88%E5%8A%A8%E8%8D%A1"><span class="nav-number">3.1.</span> <span class="nav-text">经济与市场发生更多的剧烈动荡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A1%A5%E6%B0%B4%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E7%AB%8B%E8%B6%B3%E7%82%B9"><span class="nav-number">3.2.</span> <span class="nav-text">桥水的下一个立足点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%91%E7%8E%B0%E6%8A%95%E8%B5%84%E7%9A%84%E5%9C%A3%E6%9D%AF"><span class="nav-number">3.3.</span> <span class="nav-text">发现投资的圣杯</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%91%E7%8E%B0%E8%BF%99%E4%B8%AA%E8%A7%84%E5%BE%8B%E5%90%8E%EF%BC%8C%E4%BD%9C%E8%80%85%E7%9A%84%E7%9C%8B%E6%B3%95%E6%98%AF%EF%BC%9A"><span class="nav-number">3.3.1.</span> <span class="nav-text">发现这个规律后，作者的看法是：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8A%8A%E6%88%91%E4%BB%AC%E4%BB%8E%E9%94%99%E8%AF%AF%E4%B8%AD%E6%80%BB%E7%BB%93%E7%9A%84%E6%95%99%E8%AE%AD%E7%B3%BB%E7%BB%9F%E5%8C%96"><span class="nav-number">3.3.2.</span> <span class="nav-text">把我们从错误中总结的教训系统化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%BA%E4%BA%8B%E7%AE%A1%E7%90%86%E9%97%AE%E9%A2%98"><span class="nav-number">3.3.3.</span> <span class="nav-text">人事管理问题</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Peter</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">43</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/suiming" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;suiming" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:suiming.jx@gmail.com" title="E-Mail → mailto:suiming.jx@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/xuzhuread" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;xuzhuread" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Peter</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'd98b64aad8f6c8a6ed97',
+      clientSecret: '4485ff70be66c3cdb51c774a56ce40e7d50a9ae9',
+      repo        : 'suiming.github.io',
+      owner       : 'suiming',
+      admin       : ['suiming'],
+      id          : '1041a581f8f1da1c6b5b55a53613074c',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>
