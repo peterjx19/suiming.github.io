@@ -185,6 +185,92 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/14/cb7376238656/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="码农Peter">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/11/14/cb7376238656/" class="post-title-link" itemprop="url">精准曝光组件介绍</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-11-14 18:00:00" itemprop="dateCreated datePublished" datetime="2021-11-14T18:00:00+08:00">2021-11-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-17 22:03:57" itemprop="dateModified" datetime="2022-04-17T22:03:57+08:00">2022-04-17</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>近期有个需求，当一个组件在可视区中间80%范围内出现3S，即上传曝光。组件移出页面再已入，需要再次按规则曝光。</p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><ol>
+<li>因为tableview 和 scrollview 有复用机制，需要考虑曝光对象维护问题，为防止乱，用数据 id作为唯一标识。</li>
+<li>手机资源紧缺，需要共用一个计时器</li>
+<li>为了效率问题，需要在多线程上执行曝光逻辑</li>
+</ol>
+<h2 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h2><ol>
+<li>使用基础的数组和字典，存储唯一数据id和曝光时间</li>
+<li>使用累积的方式计算曝光时间</li>
+<li>使用全局唯一定时器触发更新曝光时间</li>
+<li>使用多个线程用于计算、曝光、移除、增加曝光时间。另起一个线程调度多线程计算</li>
+</ol>
+<h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">PageMap&lt;pageName:String, eventMap:EventMap&gt;</span><br><span class="line">TrackMap&lt;eventName:String, dataMap:DataMap&gt;</span><br><span class="line">DataMap&lt;dataId:String, DataObject&gt;</span><br><span class="line"></span><br><span class="line">DataObject: &#123;</span><br><span class="line">  &quot;view&quot;: &quot;组件引用地址&quot;,</span><br><span class="line">  &quot;time&quot;: 0</span><br></pre></td></tr></table></figure>
+
+
+
+<p>每次由组件触发加载数据，则找到page_name, 再找到component_name, 生成一个data_id1: object的节点。</p>
+<p>如果在屏幕上，则设置time为0；如果组件不在屏幕上，则直接把时间设置为10s</p>
+<h3 id="调度"><a href="#调度" class="headerlink" title="调度"></a>调度</h3><p>创建常驻Timer，用于调度定时器</p>
+<p>在多线程上执行操作曝光逻辑。</p>
+<h3 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h3><p><img src="https://s2.loli.net/2022/04/16/YyBx4A3D7kuOm9g.png" alt="expose-progress"></p>
+<h2 id="Product"><a href="#Product" class="headerlink" title="Product"></a>Product</h2><p>github地址： <a target="_blank" rel="noopener" href="https://github.com/suiming/PetersLab">suiming/PetersLab (github.com)</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/13/6f9d8fb36a4e/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -630,7 +716,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">43</span>
+          <span class="site-state-item-count">44</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
