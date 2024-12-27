@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>/2023/08/30/7071cd5c10ae/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/08/30/9666f6b39c42/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">cassapp/4.14.0.0 iOS/16.6 Apple/iPhone 13 Pro</span><br><span class="line">64a2353cfe1c460001d3553c</span><br><span class="line">江山市雅西汽车修理厂 - 19106793996 这个用户在以下时间段查看了询价单 D23082500405</span><br><span class="line">08-25@18:22:28.756</span><br><span class="line">08-25@17:49:18.099	</span><br><span class="line">08-25@16:52:10.569</span><br><span class="line">08-25@15:56:45.861</span><br><span class="line">08-25@14:34:01.114	</span><br><span class="line">/inquiries/D23082500405/needsv3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/public/app/document_config</span><br><span class="line">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML</span><br><span class="line"></span><br><span class="line">权限 baseinfo</span><br><span class="line">报价 needv3</span><br><span class="line">storeInfo</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/08/30/c0b38f3905e1/</url>
+    <content><![CDATA[<p>Node.js</p>
+]]></content>
+  </entry>
+  <entry>
     <title>《成功方程式》</title>
     <url>/2023/01/14/e4f79ee50588/</url>
     <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>稻盛和夫《成功方程式》，全书七千字，大概一个小时读完。<br>封面：成功= 人格·理念（－100～100）×能力（0～100）×努力（0～100）</p>
@@ -82,6 +100,81 @@
       <tags>
         <tag>读书笔记</tag>
         <tag>《冯唐成事心法》</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《给自己的Node课程》目标、目录</title>
+    <url>/2023/01/03/0cacd25396c3/</url>
+    <content><![CDATA[<h1 id="为什么"><a href="#为什么" class="headerlink" title="为什么"></a>为什么</h1><p>拓展技术广度，要学习Node.js</p>
+<p>学习效果最好是做中学、教人学</p>
+<p>方便备份，并不断的追加内容</p>
+<h1 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做"></a>怎么做</h1><p>收集工作场景会遇到的知识点，构建目录</p>
+<p>学习每个知识点，用自己的话多角度讲解。</p>
+<p>在现有代码中找到案例</p>
+<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><h2 id="课程目录"><a href="#课程目录" class="headerlink" title="课程目录"></a>课程目录</h2><h3 id="模块二：Node-js和TypeScript基础"><a href="#模块二：Node-js和TypeScript基础" class="headerlink" title="模块二：Node.js和TypeScript基础"></a>模块二：Node.js和TypeScript基础</h3><p>JS 简介 基础</p>
+<p>TS简介 基础语法和类型系统</p>
+<p>Node.js 简介 安装</p>
+<h3 id="模块三：NestJS和Express基础"><a href="#模块三：NestJS和Express基础" class="headerlink" title="模块三：NestJS和Express基础"></a>模块三：NestJS和Express基础</h3><ol>
+<li>NestJS框架介绍和基本概念</li>
+<li>控制器和路由</li>
+<li>服务和依赖注入</li>
+<li>中间件和请求处理</li>
+<li>对应项目中的使用方式</li>
+</ol>
+<h3 id="模块四：数据库和数据模型"><a href="#模块四：数据库和数据模型" class="headerlink" title="模块四：数据库和数据模型"></a>模块四：数据库和数据模型</h3><ol>
+<li>MongoDB简介和安装</li>
+<li>Mongoose库的使用和数据模型定义</li>
+<li>CRUD操作和查询语法</li>
+<li>聚合</li>
+<li>索引</li>
+<li>mongo性能分析</li>
+<li>在项目中的使用</li>
+<li>历史出现的问题</li>
+</ol>
+<h3 id="模块五：身份验证和授权"><a href="#模块五：身份验证和授权" class="headerlink" title="模块五：身份验证和授权"></a>模块五：身份验证和授权</h3><ol>
+<li>JSON Web Token（JWT）简介和原理</li>
+<li>使用jsonwebtoken库生成和验证JWT</li>
+<li>在NestJS中实现身份验证和授权</li>
+</ol>
+<h3 id="模块六：缓存和性能优化"><a href="#模块六：缓存和性能优化" class="headerlink" title="模块六：缓存和性能优化"></a>模块六：缓存和性能优化</h3><ol>
+<li>Redis简介和安装</li>
+<li>使用redis库进行缓存操作</li>
+<li>缓存策略和性能优化技巧</li>
+<li>Redis 原理</li>
+<li>Redis 在项目中的使用</li>
+<li>Redis 历史出现过的问题</li>
+</ol>
+<h3 id="模块七：测试和质量保证"><a href="#模块七：测试和质量保证" class="headerlink" title="模块七：测试和质量保证"></a>模块七：测试和质量保证</h3><ol>
+<li>单元测试和集成测试的重要性</li>
+<li>使用Jest编写和运行测试，Mocha</li>
+<li>测试覆盖率和报告生成</li>
+<li>系统中是如何使用的</li>
+</ol>
+<h2 id="线程管理："><a href="#线程管理：" class="headerlink" title="线程管理："></a>线程管理：</h2><pre><code>     1. pm2的使用方式
+        2. 项目中是如何使用的。
+</code></pre>
+<h3 id="模块八：DevOps和工具链"><a href="#模块八：DevOps和工具链" class="headerlink" title="模块八：DevOps和工具链"></a>模块八：DevOps和工具链</h3><ol>
+<li>代码格式化和风格规范（Prettier和ESLint） </li>
+<li>Git钩子和代码提交规范（Husky和Commitlint）</li>
+<li>并行命令执行（Concurrently）和自动重启（Nodemon）</li>
+<li>部署和生产环境配置</li>
+</ol>
+<p>项目中是如何使用的。</p>
+<h3 id="模块九：其他相关技术和库"><a href="#模块九：其他相关技术和库" class="headerlink" title="模块九：其他相关技术和库"></a>模块九：其他相关技术和库</h3><ol>
+<li>HTTP协议和RESTful API设计原则</li>
+<li>第三方依赖库的使用和集成（如lodash、axios等）</li>
+<li>日志记录和日志库的使用（如bunyan）</li>
+</ol>
+<h3 id="模块十：项目实战和综合案例"><a href="#模块十：项目实战和综合案例" class="headerlink" title="模块十：项目实战和综合案例"></a>模块十：项目实战和综合案例</h3><ol>
+<li>项目架构和目录结构解析</li>
+<li>根据需求实现具体功能模块</li>
+<li>解决常见问题和调试技巧</li>
+</ol>
+<p>以上课程目录可以根据实际培训时间和学员的需求进行调整和扩展。每个模块可以包括理论讲解、示例演示和练习任务，以帮助学员快速掌握项目所涉及的技术和工具。</p>
+]]></content>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>《给自己的Node课程》</tag>
       </tags>
   </entry>
   <entry>
