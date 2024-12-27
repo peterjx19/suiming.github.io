@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图形转换器</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f5f5f5;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+            padding-top: 1rem;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .editor-panel {
+            flex: 1;
+            padding: 2rem;
+            background-color: #ffffff;
+            border-right: 1px solid #eaeaea;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .preview-panel {
+            flex: 1;
+            padding: 2rem;
+            background-color: #ffffff;
+            border-radius: 0 8px 8px 0;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        textarea {
+            width: 100%;
+            height: calc(100vh - 200px);
+            padding: 1rem;
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 14px;
+            resize: none;
+            background-color: #fafafa;
+            margin-bottom: 1rem;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #4CAF50;
+            box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.1);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+        }
+
+        button {
+            padding: 0.75rem 1.5rem;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #preview {
+            height: calc(100vh - 100px);
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            padding: 1rem;
+            overflow: auto;
+            background-color: #fafafa;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 1200px) {
+            .container {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                flex-direction: column;
+            }
+            
+            .editor-panel, .preview-panel {
+                width: 100%;
+                min-height: 50vh;
+                border-radius: 8px;
+            }
+
+            .editor-panel {
+                border-right: none;
+                border-bottom: 1px solid #eaeaea;
+                margin-bottom: 1rem;
+            }
+        }
+
+        /* 修改选择器样式 */
+        .editor-selector {
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            z-index: 1000;
+            background-color: white;
+            padding: 0.5rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        select {
+            padding: 0.5rem 2rem 0.5rem 1rem;
+            border: 1px solid #eaeaea;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            background-color: white;
+            cursor: pointer;
+            outline: none;
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 0.5rem center;
+            background-size: 1em;
+        }
+
+        select:focus {
+            border-color: #4CAF50;
+            box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.1);
+        }
+
+        .editor-container {
+            display: none;
+        }
+
+        .editor-container.active {
+            display: flex;
+        }
+
+        /* 调整标题位置 */
+        .editor-panel h1 {
+            display: inline-block;
+        }
+
+        /* 添加容器阴影效果 */
+        .editor-container.active .container {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="editor-selector">
+        <select id="editorType" onchange="switchEditor(this.value)">
+            <option value="svg">SVG 编辑器</option>
+            <option value="mermaid">Mermaid 编辑器</option>
+        </select>
+    </div>
+
+    <div id="svg-editor" class="editor-container active">
+        <div class="container">
+            <div class="editor-panel">
+                <h1>SVG 编辑器</h1>
+                <textarea id="svgInput" placeholder="在此输入SVG代码..."></textarea>
+                <div class="button-group">
+                    <button onclick="renderSVG()">渲染SVG</button>
+                    <button onclick="downloadPNG()">下载PNG</button>
+                </div>
+            </div>
+            <div class="preview-panel">
+                <h1>预览</h1>
+                <div id="preview"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mermaid-editor" class="editor-container">
+        <div class="container">
+            <div class="editor-panel">
+                <h1>Mermaid 编辑器</h1>
+                <textarea id="mermaidInput" placeholder="在此输入Mermaid代码...">graph TD
+    A[开始] --> B[处理]
+    B --> C[结束]</textarea>
+                <div class="button-group">
+                    <button onclick="renderMermaid()">渲染图表</button>
+                    <button onclick="downloadMermaidPNG()">下载PNG</button>
+                </div>
+            </div>
+            <div class="preview-panel">
+                <h1>预览</h1>
+                <div id="mermaid-preview"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
