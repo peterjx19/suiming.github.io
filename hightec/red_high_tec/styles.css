@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    gap: 20px;
+}
+
+.container {
+    width: 450px;
+    height: 550px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    background-color: var(--main-color, #e60000);
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 5px solid var(--main-color, #e60000);
+    border-top: none;
+}
+
+.title {
+    color: var(--main-color, #e60000);
+    font-size: 72px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+    margin: 30px 0;
+}
+
+.subtitle {
+    background-color: var(--main-color, #e60000);
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    padding: 15px;
+    margin: auto 0 30px 0;
+    line-height: 1.5;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.footer-item {
+    background-color: var(--main-color, #e60000);
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 0;
+    width: 48%;
+    border-radius: 5px;
+}
+
+.controls {
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.control-group label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.control-group input {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.control-value {
+    font-size: 14px;
+    color: #666;
+    text-align: right;
+}
+
+[contenteditable="true"]:focus {
+    outline: 2px dashed var(--main-color, #e60000);
+    outline-offset: 2px;
+}
+
+/* 颜色选择器样式 */
+.color-picker {
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.color-presets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.color-preset {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+.color-preset:hover {
+    transform: scale(1.1);
+}
+
+/* 免费测评样式 */
+.free-test {
+    color: white;
+    background: transparent;
+}
+
+/* 免费培育样式 - 白底红字 */
+.free-train {
+    color: var(--main-color, #e60000);
+    background-color: white;
+    border-radius: 0 5px 5px 0;
+}
+
+/* 下载按钮样式 */
+.download-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: var(--main-color, #e60000);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.download-button:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.download-button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.controls-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333;
+}
+
+/* 在文件末尾添加以下样式 */
+
+/* 模板选择器样式 */
+.template-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.template-item {
+    width: 80px;
+    height: 100px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.template-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.template-item.active {
+    border-color: var(--main-color, #e60000);
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.template-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.template-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 10px;
+    padding: 2px 0;
+    text-align: center;
+}
+
+/* 为不同模板添加特定样式 */
+.template-style-1 .header {
+    background-color: var(--main-color, #e60000);
+}
+
+.template-style-2 .header {
+    background: linear-gradient(135deg, var(--main-color, #e60000), #990000);
+    border-bottom: 3px solid #fff;
+}
+
+.template-style-3 .header {
+    background-color: #fff;
+    color: var(--main-color, #e60000);
+    border-bottom: 3px solid var(--main-color, #e60000);
+}
+
+.template-style-2 .main-content {
+    background: linear-gradient(to bottom, #fff, #f5f5f5);
+}
+
+.template-style-3 .main-content {
+    border: none;
+    background-color: #f8f8f8;
+}
+
+.template-style-3 .subtitle {
+    border-radius: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.template-style-2 .footer-item {
+    border-radius: 20px;
+}
+
+.template-style-3 .footer-item {
+    border: 2px solid var(--main-color, #e60000);
+}

@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    padding: 20px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.container {
+    width: 450px;
+    height: 550px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    resize: both;
+}
+
+.header {
+    background-color: #e60000;
+    color: white;
+    padding: 15px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    position: relative;
+}
+
+.content-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: #333;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.features {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.feature-item {
+    font-size: 16px;
+    color: #333;
+    padding: 5px 0;
+}
+
+/* 控制面板样式 */
+.controls {
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.controls-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.control-group {
+    margin-bottom: 20px;
+}
+
+.control-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.control-value {
+    font-size: 12px;
+    color: #777;
+    text-align: right;
+}
+
+.color-picker {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.color-presets {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.color-preset {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    transition: transform 0.2s;
+}
+
+.color-preset:hover {
+    transform: scale(1.1);
+}
+
+.download-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #e60000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.download-button:hover {
+    background-color: #cc0000;
+}
+
+[contenteditable="true"] {
+    outline: none;
+    border: 1px dashed transparent;
+    transition: border-color 0.3s;
+}
+
+[contenteditable="true"]:hover {
+    border-color: #ccc;
+}
+
+[contenteditable="true"]:focus {
+    border-color: #e60000;
+}

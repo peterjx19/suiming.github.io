@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    padding: 20px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.container {
+    width: 450px;
+    height: 550px;
+    background-color: #ff0000;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    resize: both;
+    padding: 0;
+    color: white;
+}
+
+.header {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    position: relative;
+}
+
+.title-section {
+    margin: 10px 0 20px;
+}
+
+.main-title, .sub-title {
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffff00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
+}
+
+.sub-title {
+    margin-top: 5px;
+}
+
+.benefits-section {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.benefit-item {
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    line-height: 1.5;
+}
+
+.certificates-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.certificate {
+    width: 100px;
+    height: 80px;
+    background-color: #ffcc00;
+    border: 2px solid #ffcc00;
+    border-radius: 5px;
+    position: relative;
+}
+
+.certificate.left::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+.certificate.right {
+    background-color: #990000;
+}
+
+.certificate-text {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.footer-section {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-item {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    flex: 1 0 30%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.footer-item.last {
+    flex-basis: 100%;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #ffff00;
+}
+
+.logo {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* 控制面板样式 */
+.controls {
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.controls-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.control-group {
+    margin-bottom: 20px;
+}
+
+.control-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.control-value {
+    font-size: 12px;
+    color: #777;
+    text-align: right;
+}
+
+.color-picker {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.color-presets {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.color-preset {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    transition: transform 0.2s;
+}
+
+.color-preset:hover {
+    transform: scale(1.1);
+}
+
+.download-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.download-button:hover {
+    background-color: #cc0000;
+}
+
+[contenteditable="true"] {
+    outline: none;
+    border: 1px dashed transparent;
+    transition: border-color 0.3s;
+}
+
+[contenteditable="true"]:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+[contenteditable="true"]:focus {
+    border-color: rgba(255, 255, 255, 0.8);
+}

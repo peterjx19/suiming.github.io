@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高新技术认定</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="container" id="resizable-container">
+        <div class="header" contenteditable="true">全国可做 欢迎咨询</div>
+        
+        <div class="main-content">
+            <div class="title-section">
+                <div class="main-title" contenteditable="true">高新技术认定</div>
+                <div class="sub-title" contenteditable="true">科技型中小申报</div>
+            </div>
+            
+            <div class="benefits-section">
+                <div class="benefit-item" contenteditable="true">品牌打造 吸引人才 融资贷款 企业上市</div>
+            </div>
+            
+            <div class="certificates-section">
+                <div class="certificate left"></div>
+                <div class="certificate-text" contenteditable="true">全国代办<br>不限地区</div>
+                <div class="certificate right"></div>
+            </div>
+            
+            <div class="footer-section">
+                <div class="footer-item" contenteditable="true">20年经验</div>
+                <div class="footer-item" contenteditable="true">绿色通道</div>
+                <div class="footer-item" contenteditable="true">全程代办</div>
+                <div class="footer-item last" contenteditable="true">免费咨询 先办理 成功后收费</div>
+            </div>
+        </div>
+        
+        <div class="logo" contenteditable="true">闲鱼</div>
+    </div>
+    
+    <div class="controls">
+        <div class="controls-title">控制面板</div>
+        
+        <div class="control-group">
+            <label>主题颜色:</label>
+            <input type="color" id="color-control" value="#ff0000" class="color-picker">
+            <div class="color-presets" id="color-presets">
+                <div class="color-preset" style="background-color: #ff0000;" data-color="#ff0000"></div>
+                <div class="color-preset" style="background-color: #0099ff;" data-color="#0099ff"></div>
+                <div class="color-preset" style="background-color: #009933;" data-color="#009933"></div>
+                <div class="color-preset" style="background-color: #ff6600;" data-color="#ff6600"></div>
+                <div class="color-preset" style="background-color: #9900cc;" data-color="#9900cc"></div>
+            </div>
+        </div>
+        
+        <div class="control-group">
+            <label>整体宽度:</label>
+            <input type="range" id="width-control" min="300" max="800" value="450">
+            <div class="control-value" id="width-value">450px</div>
+        </div>
+        
+        <div class="control-group">
+            <label>整体高度:</label>
+            <input type="range" id="height-control" min="400" max="800" value="550">
+            <div class="control-value" id="height-value">550px</div>
+        </div>
+        
+        <button id="download-btn" class="download-button">下载图片</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

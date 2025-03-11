@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高新技术企业认定</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="container" id="resizable-container">
+        <div class="top-section">
+            <div class="service-rate" contenteditable="true">服务通过率99%</div>
+            <div class="badge">
+                <div class="badge-text" contenteditable="true">认定<br>企业</div>
+            </div>
+        </div>
+        
+        <div class="main-title" contenteditable="true">高新技术</div>
+        
+        <div class="features-section">
+            <div class="feature-item" contenteditable="true">通过率高</div>
+            <div class="feature-item" contenteditable="true">免费指导</div>
+            <div class="feature-item" contenteditable="true">认真时间短</div>
+            <div class="feature-item" contenteditable="true">专业性强</div>
+        </div>
+        
+        <div class="bottom-text" contenteditable="true">专精特新/小巨人</div>
+        
+        <div class="footer">
+            <div class="footer-text" contenteditable="true">闲鱼号：玉坤平</div>
+        </div>
+    </div>
+    
+    <div class="controls">
+        <div class="controls-title">控制面板</div>
+        
+        <div class="control-group">
+            <label>主题颜色:</label>
+            <input type="color" id="color-control" value="#0099ff" class="color-picker">
+            <div class="color-presets" id="color-presets">
+                <div class="color-preset" style="background-color: #0099ff;" data-color="#0099ff"></div>
+                <div class="color-preset" style="background-color: #e60000;" data-color="#e60000"></div>
+                <div class="color-preset" style="background-color: #009933;" data-color="#009933"></div>
+                <div class="color-preset" style="background-color: #ff6600;" data-color="#ff6600"></div>
+                <div class="color-preset" style="background-color: #9900cc;" data-color="#9900cc"></div>
+            </div>
+        </div>
+        
+        <div class="control-group">
+            <label>整体宽度:</label>
+            <input type="range" id="width-control" min="300" max="800" value="450">
+            <div class="control-value" id="width-value">450px</div>
+        </div>
+        
+        <div class="control-group">
+            <label>整体高度:</label>
+            <input type="range" id="height-control" min="400" max="800" value="550">
+            <div class="control-value" id="height-value">550px</div>
+        </div>
+        
+        <button id="download-btn" class="download-button">下载图片</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

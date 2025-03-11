@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片模板库</title>
+    <link rel="stylesheet" href="templates.css">
+    <style>
+        .templates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .template-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        
+        .template-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .template-info {
+            padding: 20px;
+        }
+        
+        .template-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #4a148c;
+        }
+        
+        .template-info p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        
+        .template-tag {
+            display: inline-block;
+            background: #e1bee7;
+            color: #4a148c;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        /* 密码保护相关样式 */
+        #password-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .password-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+
+        .password-container h2 {
+            color: #4a148c;
+            margin-bottom: 20px;
+        }
+
+        .password-container input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .password-container button {
+            background-color: #4a148c;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .password-container button:hover {
+            background-color: #6a1b9a;
+        }
+
+        .password-error {
+            color: #e53935;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .content-container {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 密码保护遮罩层 -->
+    <div id="password-overlay">
+        <div class="password-container">
+            <h2>图片模板库</h2>
+            <p>请输入访问密码</p>
+            <input type="password" id="password-input" placeholder="请输入密码">
+            <p id="password-error" class="password-error">密码错误，请重试</p>
+            <button id="submit-password">确认</button>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <div class="container">
+            <header>
+                <h1>图片模板库</h1>
+                <p>选择您需要的模板开始创建图片</p>
+            </header>
+
+            <div class="templates-grid">
+                <!-- 高新技术企业认定模板 -->
+                <div class="template-card" onclick="window.location.href='high_tech_enterprise/index.html'">
+                    <div class="template-info">
+                        <h3>高新技术企业认定</h3>
+                        <p>红色主题的高新技术企业认定模板</p>
+                        <span class="template-tag">企业服务</span>
+                        <span class="template-tag">红色主题</span>
+                    </div>
+                </div>
+
+                <!-- 绿色高新技术企业模板 -->
+                <div class="template-card" onclick="window.location.href='green_tech_enterprise/index.html'">
+                    <div class="template-info">
+                        <h3>绿色高新技术企业</h3>
+                        <p>绿色主题的高新技术企业模板</p>
+                        <span class="template-tag">企业服务</span>
+                        <span class="template-tag">绿色主题</span>
+                    </div>
+                </div>
+
+                <!-- 蓝色高新技术企业模板 -->
+                <div class="template-card" onclick="window.location.href='blue_tech_enterprise/index.html'">
+                    <div class="template-info">
+                        <h3>蓝色高新技术企业</h3>
+                        <p>蓝色主题的高新技术企业认定模板</p>
+                        <span class="template-tag">企业服务</span>
+                        <span class="template-tag">蓝色主题</span>
+                    </div>
+                </div>
+
+                <!-- 紫色教育专营模板 -->
+                <div class="template-card" onclick="window.location.href='purple_education/index.html'">
+                    <div class="template-info">
+                        <h3>致知教育专营</h3>
+                        <p>紫色主题的教育服务模板</p>
+                        <span class="template-tag">教育服务</span>
+                        <span class="template-tag">紫色主题</span>
+                    </div>
+                </div>
+
+                <!-- 红色高新技术模板 -->
+                <div class="template-card" onclick="window.location.href='red_high_tec/index.html'">
+                    <div class="template-info">
+                        <h3>红色高新技术</h3>
+                        <p>红色主题的高新技术模板</p>
+                        <span class="template-tag">企业服务</span>
+                        <span class="template-tag">红色主题</span>
+                    </div>
+                </div>
+
+                <!-- 红色技术认证模板 -->
+                <div class="template-card" onclick="window.location.href='red_tech_certification/index.html'">
+                    <div class="template-info">
+                        <h3>高新技术认定</h3>
+                        <p>红色主题的技术认证模板</p>
+                        <span class="template-tag">企业服务</span>
+                        <span class="template-tag">红色主题</span>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <p>© 2023 图片模板库 - 所有模板均可自定义</p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // 设置正确的密码
+        const correctPassword = "pdvv"; // 您可以修改为您想要的密码
+        
+        // 获取DOM元素
+        const passwordOverlay = document.getElementById('password-overlay');
+        const contentContainer = document.querySelector('.content-container');
+        const passwordInput = document.getElementById('password-input');
+        const submitButton = document.getElementById('submit-password');
+        const passwordError = document.getElementById('password-error');
+        
+        // 检查本地存储中是否已验证过密码
+        if (localStorage.getItem('templateAccessGranted') === 'true') {
+            showContent();
+        }
+        
+        // 添加提交按钮点击事件
+        submitButton.addEventListener('click', checkPassword);
+        
+        // 添加输入框回车事件
+        passwordInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                checkPassword();
+            }
+        });
+        
+        // 验证密码函数
+        function checkPassword() {
+            if (passwordInput.value === correctPassword) {
+                // 密码正确，保存到本地存储并显示内容
+                localStorage.setItem('templateAccessGranted', 'true');
+                showContent();
+            } else {
+                // 密码错误，显示错误信息
+                passwordError.style.display = 'block';
+                passwordInput.value = '';
+                passwordInput.focus();
+            }
+        }
+        
+        // 显示内容函数
+        function showContent() {
+            passwordOverlay.style.display = 'none';
+            contentContainer.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

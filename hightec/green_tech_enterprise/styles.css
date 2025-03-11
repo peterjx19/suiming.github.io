@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    padding: 20px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.container {
+    width: 450px;
+    height: 550px;
+    display: flex;
+    position: relative;
+    resize: both;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.left-section {
+    width: 60%;
+    height: 100%;
+    background-color: #006633;
+    color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-section {
+    width: 40%;
+    height: 100%;
+    background-color: #ff5533;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.main-title {
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.sub-title {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: white;
+    color: #006633;
+    padding: 5px 15px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.services {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: auto;
+    border: 2px solid white;
+    padding: 15px;
+}
+
+.date-tag {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 16px;
+    border: 1px solid white;
+    padding: 5px 10px;
+}
+
+.service-tag {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.service-description {
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 30px;
+}
+
+.tag-circle {
+    width: 100px;
+    height: 100px;
+    background-color: #ffcc00;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.3;
+    color: #333;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.evaluation {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.company-info {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* 控制面板样式 */
+.controls {
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.controls-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.control-group {
+    margin-bottom: 20px;
+}
+
+.control-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.control-value {
+    font-size: 12px;
+    color: #777;
+    text-align: right;
+}
+
+.color-picker {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.color-presets {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.color-preset {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    transition: transform 0.2s;
+}
+
+.color-preset:hover {
+    transform: scale(1.1);
+}
+
+.download-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #006633;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.download-button:hover {
+    background-color: #004d26;
+}
+
+[contenteditable="true"] {
+    outline: none;
+    border: 1px dashed transparent;
+    transition: border-color 0.3s;
+}
+
+[contenteditable="true"]:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+[contenteditable="true"]:focus {
+    border-color: rgba(255, 255, 255, 0.8);
+}
