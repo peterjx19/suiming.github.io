@@ -1,0 +1,442 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 5px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+h1 {
+    font-size: 1.3rem;
+    margin: 0 0 8px 0;
+    text-align: center;
+    color: #333;
+}
+
+/* 初始化区域样式 */
+.init-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+    padding: 5px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.init-section label {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.init-section input {
+    width: 50px;
+    padding: 4px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+}
+
+/* 按钮样式统一 */
+button {
+    padding: 4px 8px;
+    border: none;
+    border-radius: 2px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#startGame {
+    background-color: #28a745;
+    color: white;
+}
+
+#startGame:hover {
+    background-color: #218838;
+}
+
+/* 玩家列表样式优化 */
+.player-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+    margin: 4px 0;
+    padding: 4px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 2px;
+}
+
+.player-number {
+    min-width: 50px;
+    font-size: 0.9rem;
+}
+
+/* 状态标签优化 */
+.status-tag {
+    padding: 2px 6px;
+    border-radius: 2px;
+    min-width: 36px;
+    text-align: center;
+}
+
+.status-alive {
+    background-color: #28a745;
+    color: white;
+}
+
+.status-dead {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* 角色按钮优化 */
+.role-button {
+    flex: 1;
+    min-width: 70px;
+    max-width: 100px;
+    text-align: center;
+    padding: 4px 6px;
+    font-size: 0.9rem;
+    border: 1px solid #ddd;
+}
+
+/* 角色颜色 */
+.role-wolf {
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+.role-good {
+    color: #28a745;
+    border-color: #28a745;
+}
+
+.role-villager {
+    color: #343a40;
+    border-color: #343a40;
+}
+
+/* 角色选项颜色 */
+.role-options button[data-role="狼人"] {
+    color: #dc3545;
+}
+
+.role-options button[data-role="好人/村民"] {
+    color: #343a40;
+}
+
+.role-options button[data-role="预言家"],
+.role-options button[data-role="女巫"],
+.role-options button[data-role="守卫"],
+.role-options button[data-role="猎人"] {
+    color: #28a745;
+}
+
+/* 弹出框优化 */
+.role-popup {
+    position: absolute;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+    margin-top: 2px;
+}
+
+.role-options {
+    padding: 2px;
+    gap: 1px;
+}
+
+.role-options button {
+    width: 100%;
+    text-align: left;
+    padding: 4px 8px;
+    border: none;
+    background: none;
+    font-size: 0.9rem;
+}
+
+/* 标签区域优化 */
+.player-tags {
+    flex: 1;
+    min-width: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.player-tag {
+    padding: 1px 4px;
+    font-size: 0.8rem;
+    border-radius: 2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.tag-wolf {
+    background-color: #ffe6e6;
+    color: #dc3545;
+    border: 1px solid #ffcccc;
+}
+
+.tag-slacker {
+    background-color: #e3f2fd;
+    color: #1565c0;
+    border: 1px solid #90caf9;
+}
+
+.tag-trouble {
+    background-color: #fff3e0;
+    color: #e65100;
+    border: 1px solid #ffcc80;
+}
+
+.tag-good {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+
+.tag-police {
+    background-color: #e8eaf6;
+    color: #3f51b5;
+    border: 1px solid #c5cae9;
+}
+
+.tag-remove {
+    cursor: pointer;
+    opacity: 0.7;
+    font-size: 1.1em;
+    line-height: 0.8;
+}
+
+.tag-remove:hover {
+    opacity: 1;
+}
+
+.tag-dropdown {
+    padding: 3px;
+    font-size: 0.9rem;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    background-color: white;
+}
+
+/* 移动端特定优化 */
+@media (max-width: 600px) {
+    body {
+        padding: 2px;
+    }
+
+    .container {
+        padding: 4px;
+    }
+
+    .player-item {
+        padding: 3px;
+    }
+
+    .init-section {
+        justify-content: center;
+    }
+
+    .role-button {
+        flex: none;
+        width: auto;
+    }
+
+    .player-tags {
+        width: 100%;
+        order: 1;
+        margin-top: 4px;
+    }
+
+    .tag-select {
+        width: 100%;
+        margin: 4px 0;
+    }
+
+    .tag-dropdown {
+        width: 100%;
+    }
+
+    .role-popup {
+        left: 0;
+        right: 0;
+        margin: 2px;
+    }
+}
+
+/* 字体大小控制按钮样式 */
+.font-size-controls {
+    position: fixed;
+    right: 5px;
+    top: 5px;
+    z-index: 1002;
+    display: flex;
+    gap: 1px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2px;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.font-size-btn {
+    padding: 2px 6px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.font-size-btn:hover {
+    opacity: 1;
+}
+
+.font-size-btn.active {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+    opacity: 1;
+}
+
+/* 移动端优化 */
+@media (max-width: 600px) {
+    .font-size-controls {
+        top: 2px;
+        right: 2px;
+    }
+}
+
+/* 字体大小类 */
+.font-small {
+    --base-size: 12px;
+}
+
+.font-medium {
+    --base-size: 14px;
+}
+
+.font-large {
+    --base-size: 16px;
+}
+
+/* 使用 CSS 变量调整各元素体大小 */
+.player-number {
+    font-size: calc(0.9rem * var(--base-size, 1));
+}
+
+.status-tag {
+    font-size: calc(0.8rem * var(--base-size, 1));
+}
+
+.role-button {
+    font-size: calc(0.9rem * var(--base-size, 1));
+}
+
+.role-options button {
+    font-size: calc(0.9rem * var(--base-size, 1));
+}
+
+.player-tag {
+    font-size: calc(0.8rem * var(--base-size, 1));
+}
+
+.tag-dropdown {
+    font-size: calc(0.9rem * var(--base-size, 1));
+}
+
+/* 移除列表默认样式和间距 */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}
+
+#playerList {
+    margin: 0;
+    padding: 0;
+}
+
+/* 标签选择器样式优化 */
+.tag-select {
+    flex: 0 0 auto; /* 防止伸缩 */
+    width: 80px; /* 固定宽度 */
+}
+
+.tag-dropdown {
+    width: 100%;
+    padding: 2px;
+    font-size: 0.9rem;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    background-color: white;
+}
+
+/* 移动端特定优化 */
+@media (max-width: 600px) {
+    .tag-select {
+        width: 50px; /* 移动端稍微窄一点 */
+    }
+    
+    .tag-dropdown {
+        padding: 1px;
+    }
+}
+
+/* 基础字体设置 */
+:root {
+    --base-size: 14px;
+}
+
+/* 统一字体大小 */
+body, button, input, select, .player-number, .status-tag, .role-button, 
+.role-options button, .player-tag, .tag-dropdown, .init-section label {
+    font-size: var(--base-size);
+}
+
+/* 字体大小控制 */
+.font-size-btn {
+    font-size: var(--base-size);
+}
+
+/* 字体大小类 */
+.font-small {
+    --base-size: 12px;
+}
+
+.font-medium {
+    --base-size: 14px;
+}
+
+.font-large {
+    --base-size: 16px;
+}
+
+/* 行为选择器的默认选项（"行为"文字）特殊处理 */
+.tag-dropdown option:first-child {
+    font-size: 12px;  /* 比其他文字小一号 */
+    color: #666;      /* 稍微淡一点的颜色 */
+}
+
+/* 其他选项保持原有大小 */
+.tag-dropdown option:not(:first-child) {
+    font-size: var(--base-size);
+}

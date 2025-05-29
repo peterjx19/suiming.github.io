@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>狼人杀助手</title>
+</head>
+<body>
+    <div class="container">
+        <h1>狼人杀助手</h1>
+        <div class="font-size-controls">
+            <button class="font-size-btn" data-size="small">小</button>
+            <button class="font-size-btn" data-size="medium">中</button>
+            <button class="font-size-btn" data-size="large">大</button>
+        </div>
+        <div class="init-section">
+            <label for="numPlayers">请输入参与人数:</label>
+            <input type="number" id="numPlayers" min="3" required>
+            <button id="startGame">开始游戏</button>
+            <button id="resetGame" class="reset-button">重置游戏</button>
+        </div>
+        <div class="player-section" id="playerSection" style="display:none;">
+            <h2>玩家列表</h2>
+            <ul id="playerList">
+                <!-- 玩家列表项模板 -->
+                <template id="playerItemTemplate">
+                    <li class="player-item">
+                        <span class="player-number"></span>
+                        <button class="role-button">选择角色</button>
+                        <div class="role-popup" style="display: none;">
+                            <div class="role-options">
+                                <button data-role="狼人">狼人</button>
+                                <button data-role="预言家">预言家</button>
+                                <button data-role="女巫">女巫</button>
+                                <button data-role="守卫">守卫</button>
+                                <button data-role="猎人">猎人</button>
+                                <button data-role="村民">好人/村民</button>
+                                <button data-role="" class="role-reset">重置 ⟲</button>
+                            </div>
+                        </div>
+                    </li>
+                </template>
+            </ul>
+        </div>
+        <div id="tagSelectTemplate" class="tag-select" style="display: none;">
+            <select class="tag-dropdown">
+                <option value="">行为</option>
+            </select>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
