@@ -146,8 +146,8 @@ async function downloadMermaidPNG() {
     const img = new Image();
     
     img.onload = function() {
-        canvas.width = img.width * 5;
-        canvas.height = img.height * 5;
+        canvas.width = canvas.width > 1000 ? canvas.width : 1000;
+        canvas.height = (canvas.width * img.height) / img.width;
         
         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
         
