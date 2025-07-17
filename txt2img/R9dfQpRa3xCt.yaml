@@ -1,0 +1,1511 @@
+# 订阅邮箱：501390485@qq.com
+mixed-port: 7890
+allow-lan: true
+bind-address: '*'
+mode: rule
+log-level: info
+external-controller: '127.0.0.1:9090'
+dns:
+  enable: true
+  ipv6: true
+  default-nameserver: [8.8.8.8, 1.1.1.1, 223.5.5.5, 119.29.29.29]
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  use-hosts: true
+  nameserver: ['https://doh.pub/dns-query', 'https://dns.alidns.com/dns-query']
+  fallback:
+    [
+      'https://doh.dns.sb/dns-query',
+      'https://dns.cloudflare.com/dns-query',
+      'https://dns.twnic.tw/dns-query',
+      'tls://8.8.4.4:853',
+    ]
+  fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
+proxies:
+  - {
+      name: '距离下次重置剩余：20 天',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmhk.lma1b2.com,
+      port: 53401,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: 邮箱：501390485@qq.com,
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmhk.lma1b2.com,
+      port: 53401,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: 🐤坤坤VIP-无限套餐·正经人组,
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmhk.lma1b2.com,
+      port: 53401,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: 套餐到期：2026-01-10,
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmhk.lma1b2.com,
+      port: 53401,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '剩余流量：1713.05 GB',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmhk.lma1b2.com,
+      port: 53401,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '香港 01-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmhk.lma1b2.com,
+      port: 53401,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '香港 02-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmhk.lma1b2.com,
+      port: 53402,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '香港 03-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmhk.lma1b2.com,
+      port: 53403,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '香港 04-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmhk.lma1b2.com,
+      port: 53404,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '香港 05-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmhk.lma1b2.com,
+      port: 53405,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '香港 06-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmhk.lma1b2.com,
+      port: 53406,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '香港 07-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmhk.lma1b2.com,
+      port: 53407,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '香港 08-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmhk.lma1b2.com,
+      port: 53408,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '香港 09-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmhk.lma1b2.com,
+      port: 53409,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '香港 10-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmhk.lma1b2.com,
+      port: 53410,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '香港 11-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmhk.lma1b2.com,
+      port: 53411,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '香港 12-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmhk.lma1b2.com,
+      port: 53412,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '香港 13-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmhk.lma1b2.com,
+      port: 53413,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '香港 14-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmhk.lma1b2.com,
+      port: 53414,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '香港 15-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmhk.lma1b2.com,
+      port: 53415,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '香港 16-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmhk.lma1b2.com,
+      port: 53416,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '香港 17-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmhk.lma1b2.com,
+      port: 53417,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '香港 18-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmhk.lma1b2.com,
+      port: 53418,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '香港 19-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmhk.lma1b2.com,
+      port: 53419,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '香港 20-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmhk.lma1b2.com,
+      port: 53420,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '台湾 01-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmtw.lma1b2.com,
+      port: 53421,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '台湾 02-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmtw.lma1b2.com,
+      port: 53422,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '台湾 03-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmtw.lma1b2.com,
+      port: 53423,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '台湾 04-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmtw.lma1b2.com,
+      port: 53424,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '台湾 05-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmtw.lma1b2.com,
+      port: 53425,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '台湾 06-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmtw.lma1b2.com,
+      port: 53426,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '台湾 07-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmtw.lma1b2.com,
+      port: 53427,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '台湾 08-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmtw.lma1b2.com,
+      port: 53428,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '台湾 09-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmtw.lma1b2.com,
+      port: 53429,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '台湾 10-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmtw.lma1b2.com,
+      port: 53430,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '新加坡 01-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmsg.lma1b2.com,
+      port: 53431,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '新加坡 02-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmsg.lma1b2.com,
+      port: 53432,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '新加坡 03-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmsg.lma1b2.com,
+      port: 53433,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '新加坡 04-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmsg.lma1b2.com,
+      port: 53434,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '新加坡 05-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmsg.lma1b2.com,
+      port: 53435,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '新加坡 06-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmsg.lma1b2.com,
+      port: 53436,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '新加坡 07-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmsg.lma1b2.com,
+      port: 53437,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '新加坡 08-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmsg.lma1b2.com,
+      port: 53438,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '新加坡 09-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmsg.lma1b2.com,
+      port: 53439,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '新加坡 10-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmsg.lma1b2.com,
+      port: 53440,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '日本 01-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmjp.lma1b2.com,
+      port: 53441,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '日本 02-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmjp.lma1b2.com,
+      port: 53442,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '日本 03-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmjp.lma1b2.com,
+      port: 53443,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '日本 04-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmjp.lma1b2.com,
+      port: 53444,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '日本 05-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmjp.lma1b2.com,
+      port: 53445,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '日本 06-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmjp.lma1b2.com,
+      port: 53446,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '日本 07-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmjp.lma1b2.com,
+      port: 53447,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '日本 08-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmjp.lma1b2.com,
+      port: 53448,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '日本 09-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmjp.lma1b2.com,
+      port: 53449,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '日本 10-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmjp.lma1b2.com,
+      port: 53450,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '美国 01-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmus.lma1b2.com,
+      port: 53451,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '美国 02-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmus.lma1b2.com,
+      port: 53452,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '美国 03-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmus.lma1b2.com,
+      port: 53453,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '美国 04-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmus.lma1b2.com,
+      port: 53454,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '美国 05-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmus.lma1b2.com,
+      port: 53455,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '美国 06-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmus.lma1b2.com,
+      port: 53456,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '美国 07-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmus.lma1b2.com,
+      port: 53457,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '美国 08-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmus.lma1b2.com,
+      port: 53458,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '美国 09-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmus.lma1b2.com,
+      port: 53459,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '美国 10-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmus.lma1b2.com,
+      port: 53460,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '马来西亚 01-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmmy.lma1b2.com,
+      port: 53466,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '马来西亚 02-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmmy.lma1b2.com,
+      port: 53467,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '马来西亚 03-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmmy.lma1b2.com,
+      port: 53468,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '马来西亚 04-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmmy.lma1b2.com,
+      port: 53469,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '马来西亚 05-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmmy.lma1b2.com,
+      port: 53470,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '土耳其 01-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmtr.lma1b2.com,
+      port: 53496,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+  - {
+      name: '阿根廷 01-IPLC专线',
+      type: trojan,
+      server: lmnode-ixd3fh2v5uq1v3z-lmar.lma1b2.com,
+      port: 53498,
+      password: ef1e6c13-a710-4a7f-9fa7-03f98792c843,
+      udp: true,
+      sni: 'NULL',
+      skip-cert-verify: true,
+    }
+proxy-groups:
+  - {
+      name: 🐔坤坤八卦云-IPLC专线秒开·省着用,
+      type: select,
+      proxies:
+        [
+          ①⚔️自动选择-IPLC专线-「吕布赤兔🐎」,
+          ③🐇故障转移-备用专线-「貂蝉绝影🦚」,
+          '距离下次重置剩余：20 天',
+          邮箱：501390485@qq.com,
+          🐤坤坤VIP-无限套餐·正经人组,
+          套餐到期：2026-01-10,
+          '剩余流量：1713.05 GB',
+          '香港 01-IPLC专线',
+          '香港 02-IPLC专线',
+          '香港 03-IPLC专线',
+          '香港 04-IPLC专线',
+          '香港 05-IPLC专线',
+          '香港 06-IPLC专线',
+          '香港 07-IPLC专线',
+          '香港 08-IPLC专线',
+          '香港 09-IPLC专线',
+          '香港 10-IPLC专线',
+          '香港 11-IPLC专线',
+          '香港 12-IPLC专线',
+          '香港 13-IPLC专线',
+          '香港 14-IPLC专线',
+          '香港 15-IPLC专线',
+          '香港 16-IPLC专线',
+          '香港 17-IPLC专线',
+          '香港 18-IPLC专线',
+          '香港 19-IPLC专线',
+          '香港 20-IPLC专线',
+          '台湾 01-IPLC专线',
+          '台湾 02-IPLC专线',
+          '台湾 03-IPLC专线',
+          '台湾 04-IPLC专线',
+          '台湾 05-IPLC专线',
+          '台湾 06-IPLC专线',
+          '台湾 07-IPLC专线',
+          '台湾 08-IPLC专线',
+          '台湾 09-IPLC专线',
+          '台湾 10-IPLC专线',
+          '新加坡 01-IPLC专线',
+          '新加坡 02-IPLC专线',
+          '新加坡 03-IPLC专线',
+          '新加坡 04-IPLC专线',
+          '新加坡 05-IPLC专线',
+          '新加坡 06-IPLC专线',
+          '新加坡 07-IPLC专线',
+          '新加坡 08-IPLC专线',
+          '新加坡 09-IPLC专线',
+          '新加坡 10-IPLC专线',
+          '日本 01-IPLC专线',
+          '日本 02-IPLC专线',
+          '日本 03-IPLC专线',
+          '日本 04-IPLC专线',
+          '日本 05-IPLC专线',
+          '日本 06-IPLC专线',
+          '日本 07-IPLC专线',
+          '日本 08-IPLC专线',
+          '日本 09-IPLC专线',
+          '日本 10-IPLC专线',
+          '美国 01-IPLC专线',
+          '美国 02-IPLC专线',
+          '美国 03-IPLC专线',
+          '美国 04-IPLC专线',
+          '美国 05-IPLC专线',
+          '美国 06-IPLC专线',
+          '美国 07-IPLC专线',
+          '美国 08-IPLC专线',
+          '美国 09-IPLC专线',
+          '美国 10-IPLC专线',
+          '马来西亚 01-IPLC专线',
+          '马来西亚 02-IPLC专线',
+          '马来西亚 03-IPLC专线',
+          '马来西亚 04-IPLC专线',
+          '马来西亚 05-IPLC专线',
+          '土耳其 01-IPLC专线',
+          '阿根廷 01-IPLC专线',
+        ],
+    }
+  - {
+      name: ①⚔️自动选择-IPLC专线-「吕布赤兔🐎」,
+      type: url-test,
+      proxies:
+        [
+          '距离下次重置剩余：20 天',
+          邮箱：501390485@qq.com,
+          🐤坤坤VIP-无限套餐·正经人组,
+          套餐到期：2026-01-10,
+          '剩余流量：1713.05 GB',
+          '香港 01-IPLC专线',
+          '香港 02-IPLC专线',
+          '香港 03-IPLC专线',
+          '香港 04-IPLC专线',
+          '香港 05-IPLC专线',
+          '香港 06-IPLC专线',
+          '香港 07-IPLC专线',
+          '香港 08-IPLC专线',
+          '香港 09-IPLC专线',
+          '香港 10-IPLC专线',
+          '香港 11-IPLC专线',
+          '香港 12-IPLC专线',
+          '香港 13-IPLC专线',
+          '香港 14-IPLC专线',
+          '香港 15-IPLC专线',
+          '香港 16-IPLC专线',
+          '香港 17-IPLC专线',
+          '香港 18-IPLC专线',
+          '香港 19-IPLC专线',
+          '香港 20-IPLC专线',
+          '台湾 01-IPLC专线',
+          '台湾 02-IPLC专线',
+          '台湾 03-IPLC专线',
+          '台湾 04-IPLC专线',
+          '台湾 05-IPLC专线',
+          '台湾 06-IPLC专线',
+          '台湾 07-IPLC专线',
+          '台湾 08-IPLC专线',
+          '台湾 09-IPLC专线',
+          '台湾 10-IPLC专线',
+          '新加坡 01-IPLC专线',
+          '新加坡 02-IPLC专线',
+          '新加坡 03-IPLC专线',
+          '新加坡 04-IPLC专线',
+          '新加坡 05-IPLC专线',
+          '新加坡 06-IPLC专线',
+          '新加坡 07-IPLC专线',
+          '新加坡 08-IPLC专线',
+          '新加坡 09-IPLC专线',
+          '新加坡 10-IPLC专线',
+          '日本 01-IPLC专线',
+          '日本 02-IPLC专线',
+          '日本 03-IPLC专线',
+          '日本 04-IPLC专线',
+          '日本 05-IPLC专线',
+          '日本 06-IPLC专线',
+          '日本 07-IPLC专线',
+          '日本 08-IPLC专线',
+          '日本 09-IPLC专线',
+          '日本 10-IPLC专线',
+          '美国 01-IPLC专线',
+          '美国 02-IPLC专线',
+          '美国 03-IPLC专线',
+          '美国 04-IPLC专线',
+          '美国 05-IPLC专线',
+          '美国 06-IPLC专线',
+          '美国 07-IPLC专线',
+          '美国 08-IPLC专线',
+          '美国 09-IPLC专线',
+          '美国 10-IPLC专线',
+          '马来西亚 01-IPLC专线',
+          '马来西亚 02-IPLC专线',
+          '马来西亚 03-IPLC专线',
+          '马来西亚 04-IPLC专线',
+          '马来西亚 05-IPLC专线',
+          '土耳其 01-IPLC专线',
+          '阿根廷 01-IPLC专线',
+        ],
+      url: 'http://www.gstatic.com/generate_204',
+      interval: 600,
+    }
+  - {
+      name: ③🐇故障转移-备用专线-「貂蝉绝影🦚」,
+      type: fallback,
+      proxies:
+        [
+          '距离下次重置剩余：20 天',
+          邮箱：501390485@qq.com,
+          🐤坤坤VIP-无限套餐·正经人组,
+          套餐到期：2026-01-10,
+          '剩余流量：1713.05 GB',
+          '香港 01-IPLC专线',
+          '香港 02-IPLC专线',
+          '香港 03-IPLC专线',
+          '香港 04-IPLC专线',
+          '香港 05-IPLC专线',
+          '香港 06-IPLC专线',
+          '香港 07-IPLC专线',
+          '香港 08-IPLC专线',
+          '香港 09-IPLC专线',
+          '香港 10-IPLC专线',
+          '香港 11-IPLC专线',
+          '香港 12-IPLC专线',
+          '香港 13-IPLC专线',
+          '香港 14-IPLC专线',
+          '香港 15-IPLC专线',
+          '香港 16-IPLC专线',
+          '香港 17-IPLC专线',
+          '香港 18-IPLC专线',
+          '香港 19-IPLC专线',
+          '香港 20-IPLC专线',
+          '台湾 01-IPLC专线',
+          '台湾 02-IPLC专线',
+          '台湾 03-IPLC专线',
+          '台湾 04-IPLC专线',
+          '台湾 05-IPLC专线',
+          '台湾 06-IPLC专线',
+          '台湾 07-IPLC专线',
+          '台湾 08-IPLC专线',
+          '台湾 09-IPLC专线',
+          '台湾 10-IPLC专线',
+          '新加坡 01-IPLC专线',
+          '新加坡 02-IPLC专线',
+          '新加坡 03-IPLC专线',
+          '新加坡 04-IPLC专线',
+          '新加坡 05-IPLC专线',
+          '新加坡 06-IPLC专线',
+          '新加坡 07-IPLC专线',
+          '新加坡 08-IPLC专线',
+          '新加坡 09-IPLC专线',
+          '新加坡 10-IPLC专线',
+          '日本 01-IPLC专线',
+          '日本 02-IPLC专线',
+          '日本 03-IPLC专线',
+          '日本 04-IPLC专线',
+          '日本 05-IPLC专线',
+          '日本 06-IPLC专线',
+          '日本 07-IPLC专线',
+          '日本 08-IPLC专线',
+          '日本 09-IPLC专线',
+          '日本 10-IPLC专线',
+          '美国 01-IPLC专线',
+          '美国 02-IPLC专线',
+          '美国 03-IPLC专线',
+          '美国 04-IPLC专线',
+          '美国 05-IPLC专线',
+          '美国 06-IPLC专线',
+          '美国 07-IPLC专线',
+          '美国 08-IPLC专线',
+          '美国 09-IPLC专线',
+          '美国 10-IPLC专线',
+          '马来西亚 01-IPLC专线',
+          '马来西亚 02-IPLC专线',
+          '马来西亚 03-IPLC专线',
+          '马来西亚 04-IPLC专线',
+          '马来西亚 05-IPLC专线',
+          '土耳其 01-IPLC专线',
+          '阿根廷 01-IPLC专线',
+        ],
+      url: 'http://www.gstatic.com/generate_204',
+      interval: 600,
+    }
+rules:
+  - 'DOMAIN,kun8.vip,DIRECT'
+  - 'DOMAIN,www.kun8.vip,DIRECT'
+  - 'DOMAIN,xiaoji.kun8.vip,DIRECT'
+  - 'DOMAIN,jd.kun8.vip,DIRECT'
+  - 'DOMAIN,jiedian.kun8.vip,DIRECT'
+  - 'DOMAIN-SUFFIX,microsoft.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,bing.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,live.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,office.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,services.googleapis.cn,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,xn--ngstr-lra8j.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN,safebrowsing.urlsec.qq.com,DIRECT'
+  - 'DOMAIN,safebrowsing.googleapis.com,DIRECT'
+  - 'DOMAIN,developer.apple.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,digicert.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN,ocsp.apple.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN,ocsp.comodoca.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN,ocsp.usertrust.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN,ocsp.sectigo.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN,ocsp.verisign.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,apple-dns.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN,testflight.apple.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN,sandbox.itunes.apple.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN,itunes.apple.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,apps.apple.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,blobstore.apple.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN,cvws.icloud-content.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,mzstatic.com,DIRECT'
+  - 'DOMAIN-SUFFIX,itunes.apple.com,DIRECT'
+  - 'DOMAIN-SUFFIX,icloud.com,DIRECT'
+  - 'DOMAIN-SUFFIX,icloud-content.com,DIRECT'
+  - 'DOMAIN-SUFFIX,me.com,DIRECT'
+  - 'DOMAIN-SUFFIX,aaplimg.com,DIRECT'
+  - 'DOMAIN-SUFFIX,cdn20.com,DIRECT'
+  - 'DOMAIN-SUFFIX,cdn-apple.com,DIRECT'
+  - 'DOMAIN-SUFFIX,akadns.net,DIRECT'
+  - 'DOMAIN-SUFFIX,akamaiedge.net,DIRECT'
+  - 'DOMAIN-SUFFIX,edgekey.net,DIRECT'
+  - 'DOMAIN-SUFFIX,mwcloudcdn.com,DIRECT'
+  - 'DOMAIN-SUFFIX,mwcname.com,DIRECT'
+  - 'DOMAIN-SUFFIX,apple.com,DIRECT'
+  - 'DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT'
+  - 'DOMAIN-SUFFIX,apple-mapkit.com,DIRECT'
+  - 'DOMAIN-SUFFIX,126.com,DIRECT'
+  - 'DOMAIN-SUFFIX,126.net,DIRECT'
+  - 'DOMAIN-SUFFIX,127.net,DIRECT'
+  - 'DOMAIN-SUFFIX,163.com,DIRECT'
+  - 'DOMAIN-SUFFIX,360buyimg.com,DIRECT'
+  - 'DOMAIN-SUFFIX,36kr.com,DIRECT'
+  - 'DOMAIN-SUFFIX,acfun.tv,DIRECT'
+  - 'DOMAIN-SUFFIX,air-matters.com,DIRECT'
+  - 'DOMAIN-SUFFIX,aixifan.com,DIRECT'
+  - 'DOMAIN-KEYWORD,alicdn,DIRECT'
+  - 'DOMAIN-KEYWORD,alipay,DIRECT'
+  - 'DOMAIN-KEYWORD,taobao,DIRECT'
+  - 'DOMAIN-SUFFIX,amap.com,DIRECT'
+  - 'DOMAIN-SUFFIX,autonavi.com,DIRECT'
+  - 'DOMAIN-KEYWORD,baidu,DIRECT'
+  - 'DOMAIN-SUFFIX,bdimg.com,DIRECT'
+  - 'DOMAIN-SUFFIX,bdstatic.com,DIRECT'
+  - 'DOMAIN-SUFFIX,bilibili.com,DIRECT'
+  - 'DOMAIN-SUFFIX,bilivideo.com,DIRECT'
+  - 'DOMAIN-SUFFIX,caiyunapp.com,DIRECT'
+  - 'DOMAIN-SUFFIX,clouddn.com,DIRECT'
+  - 'DOMAIN-SUFFIX,cnbeta.com,DIRECT'
+  - 'DOMAIN-SUFFIX,cnbetacdn.com,DIRECT'
+  - 'DOMAIN-SUFFIX,cootekservice.com,DIRECT'
+  - 'DOMAIN-SUFFIX,csdn.net,DIRECT'
+  - 'DOMAIN-SUFFIX,ctrip.com,DIRECT'
+  - 'DOMAIN-SUFFIX,dgtle.com,DIRECT'
+  - 'DOMAIN-SUFFIX,dianping.com,DIRECT'
+  - 'DOMAIN-SUFFIX,douban.com,DIRECT'
+  - 'DOMAIN-SUFFIX,doubanio.com,DIRECT'
+  - 'DOMAIN-SUFFIX,duokan.com,DIRECT'
+  - 'DOMAIN-SUFFIX,easou.com,DIRECT'
+  - 'DOMAIN-SUFFIX,ele.me,DIRECT'
+  - 'DOMAIN-SUFFIX,feng.com,DIRECT'
+  - 'DOMAIN-SUFFIX,fir.im,DIRECT'
+  - 'DOMAIN-SUFFIX,frdic.com,DIRECT'
+  - 'DOMAIN-SUFFIX,g-cores.com,DIRECT'
+  - 'DOMAIN-SUFFIX,godic.net,DIRECT'
+  - 'DOMAIN-SUFFIX,gtimg.com,DIRECT'
+  - 'DOMAIN,cdn.hockeyapp.net,DIRECT'
+  - 'DOMAIN-SUFFIX,hongxiu.com,DIRECT'
+  - 'DOMAIN-SUFFIX,hxcdn.net,DIRECT'
+  - 'DOMAIN-SUFFIX,iciba.com,DIRECT'
+  - 'DOMAIN-SUFFIX,ifeng.com,DIRECT'
+  - 'DOMAIN-SUFFIX,ifengimg.com,DIRECT'
+  - 'DOMAIN-SUFFIX,ipip.net,DIRECT'
+  - 'DOMAIN-SUFFIX,iqiyi.com,DIRECT'
+  - 'DOMAIN-SUFFIX,jd.com,DIRECT'
+  - 'DOMAIN-SUFFIX,jianshu.com,DIRECT'
+  - 'DOMAIN-SUFFIX,knewone.com,DIRECT'
+  - 'DOMAIN-SUFFIX,le.com,DIRECT'
+  - 'DOMAIN-SUFFIX,lecloud.com,DIRECT'
+  - 'DOMAIN-SUFFIX,lemicp.com,DIRECT'
+  - 'DOMAIN-SUFFIX,licdn.com,DIRECT'
+  - 'DOMAIN-SUFFIX,luoo.net,DIRECT'
+  - 'DOMAIN-SUFFIX,meituan.com,DIRECT'
+  - 'DOMAIN-SUFFIX,meituan.net,DIRECT'
+  - 'DOMAIN-SUFFIX,mi.com,DIRECT'
+  - 'DOMAIN-SUFFIX,miaopai.com,DIRECT'
+  - 'DOMAIN-SUFFIX,microsoft.com,DIRECT'
+  - 'DOMAIN-SUFFIX,microsoftonline.com,DIRECT'
+  - 'DOMAIN-SUFFIX,miui.com,DIRECT'
+  - 'DOMAIN-SUFFIX,miwifi.com,DIRECT'
+  - 'DOMAIN-SUFFIX,mob.com,DIRECT'
+  - 'DOMAIN-SUFFIX,netease.com,DIRECT'
+  - 'DOMAIN-SUFFIX,office.com,DIRECT'
+  - 'DOMAIN-SUFFIX,office365.com,DIRECT'
+  - 'DOMAIN-KEYWORD,officecdn,DIRECT'
+  - 'DOMAIN-SUFFIX,oschina.net,DIRECT'
+  - 'DOMAIN-SUFFIX,ppsimg.com,DIRECT'
+  - 'DOMAIN-SUFFIX,pstatp.com,DIRECT'
+  - 'DOMAIN-SUFFIX,qcloud.com,DIRECT'
+  - 'DOMAIN-SUFFIX,qdaily.com,DIRECT'
+  - 'DOMAIN-SUFFIX,qdmm.com,DIRECT'
+  - 'DOMAIN-SUFFIX,qhimg.com,DIRECT'
+  - 'DOMAIN-SUFFIX,qhres.com,DIRECT'
+  - 'DOMAIN-SUFFIX,qidian.com,DIRECT'
+  - 'DOMAIN-SUFFIX,qihucdn.com,DIRECT'
+  - 'DOMAIN-SUFFIX,qiniu.com,DIRECT'
+  - 'DOMAIN-SUFFIX,qiniucdn.com,DIRECT'
+  - 'DOMAIN-SUFFIX,qiyipic.com,DIRECT'
+  - 'DOMAIN-SUFFIX,qq.com,DIRECT'
+  - 'DOMAIN-SUFFIX,qqurl.com,DIRECT'
+  - 'DOMAIN-SUFFIX,rarbg.to,DIRECT'
+  - 'DOMAIN-SUFFIX,ruguoapp.com,DIRECT'
+  - 'DOMAIN-SUFFIX,segmentfault.com,DIRECT'
+  - 'DOMAIN-SUFFIX,sinaapp.com,DIRECT'
+  - 'DOMAIN-SUFFIX,smzdm.com,DIRECT'
+  - 'DOMAIN-SUFFIX,snapdrop.net,DIRECT'
+  - 'DOMAIN-SUFFIX,sogou.com,DIRECT'
+  - 'DOMAIN-SUFFIX,sogoucdn.com,DIRECT'
+  - 'DOMAIN-SUFFIX,sohu.com,DIRECT'
+  - 'DOMAIN-SUFFIX,soku.com,DIRECT'
+  - 'DOMAIN-SUFFIX,speedtest.net,DIRECT'
+  - 'DOMAIN-SUFFIX,sspai.com,DIRECT'
+  - 'DOMAIN-SUFFIX,suning.com,DIRECT'
+  - 'DOMAIN-SUFFIX,taobao.com,DIRECT'
+  - 'DOMAIN-SUFFIX,tencent.com,DIRECT'
+  - 'DOMAIN-SUFFIX,tenpay.com,DIRECT'
+  - 'DOMAIN-SUFFIX,tianyancha.com,DIRECT'
+  - 'DOMAIN-SUFFIX,tmall.com,DIRECT'
+  - 'DOMAIN-SUFFIX,tudou.com,DIRECT'
+  - 'DOMAIN-SUFFIX,umetrip.com,DIRECT'
+  - 'DOMAIN-SUFFIX,upaiyun.com,DIRECT'
+  - 'DOMAIN-SUFFIX,upyun.com,DIRECT'
+  - 'DOMAIN-SUFFIX,veryzhun.com,DIRECT'
+  - 'DOMAIN-SUFFIX,weather.com,DIRECT'
+  - 'DOMAIN-SUFFIX,weibo.com,DIRECT'
+  - 'DOMAIN-SUFFIX,xiami.com,DIRECT'
+  - 'DOMAIN-SUFFIX,xiami.net,DIRECT'
+  - 'DOMAIN-SUFFIX,xiaomicp.com,DIRECT'
+  - 'DOMAIN-SUFFIX,ximalaya.com,DIRECT'
+  - 'DOMAIN-SUFFIX,xmcdn.com,DIRECT'
+  - 'DOMAIN-SUFFIX,xunlei.com,DIRECT'
+  - 'DOMAIN-SUFFIX,yhd.com,DIRECT'
+  - 'DOMAIN-SUFFIX,yihaodianimg.com,DIRECT'
+  - 'DOMAIN-SUFFIX,yinxiang.com,DIRECT'
+  - 'DOMAIN-SUFFIX,ykimg.com,DIRECT'
+  - 'DOMAIN-SUFFIX,youdao.com,DIRECT'
+  - 'DOMAIN-SUFFIX,youku.com,DIRECT'
+  - 'DOMAIN-SUFFIX,zealer.com,DIRECT'
+  - 'DOMAIN-SUFFIX,zhihu.com,DIRECT'
+  - 'DOMAIN-SUFFIX,zhimg.com,DIRECT'
+  - 'DOMAIN-SUFFIX,zimuzu.tv,DIRECT'
+  - 'DOMAIN-SUFFIX,zoho.com,DIRECT'
+  - 'DOMAIN-KEYWORD,amazon,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-KEYWORD,google,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-KEYWORD,gmail,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-KEYWORD,youtube,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-KEYWORD,facebook,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,fb.me,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,fbcdn.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-KEYWORD,twitter,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-KEYWORD,instagram,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-KEYWORD,dropbox,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,twimg.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-KEYWORD,blogspot,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,youtu.be,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-KEYWORD,whatsapp,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-KEYWORD,admarvel,REJECT'
+  - 'DOMAIN-KEYWORD,admaster,REJECT'
+  - 'DOMAIN-KEYWORD,adsage,REJECT'
+  - 'DOMAIN-KEYWORD,adsmogo,REJECT'
+  - 'DOMAIN-KEYWORD,adsrvmedia,REJECT'
+  - 'DOMAIN-KEYWORD,adwords,REJECT'
+  - 'DOMAIN-KEYWORD,adservice,REJECT'
+  - 'DOMAIN-SUFFIX,appsflyer.com,REJECT'
+  - 'DOMAIN-KEYWORD,domob,REJECT'
+  - 'DOMAIN-SUFFIX,doubleclick.net,REJECT'
+  - 'DOMAIN-KEYWORD,duomeng,REJECT'
+  - 'DOMAIN-KEYWORD,dwtrack,REJECT'
+  - 'DOMAIN-KEYWORD,guanggao,REJECT'
+  - 'DOMAIN-KEYWORD,lianmeng,REJECT'
+  - 'DOMAIN-SUFFIX,mmstat.com,REJECT'
+  - 'DOMAIN-KEYWORD,mopub,REJECT'
+  - 'DOMAIN-KEYWORD,omgmta,REJECT'
+  - 'DOMAIN-KEYWORD,openx,REJECT'
+  - 'DOMAIN-KEYWORD,partnerad,REJECT'
+  - 'DOMAIN-KEYWORD,pingfore,REJECT'
+  - 'DOMAIN-KEYWORD,supersonicads,REJECT'
+  - 'DOMAIN-KEYWORD,uedas,REJECT'
+  - 'DOMAIN-KEYWORD,umeng,REJECT'
+  - 'DOMAIN-KEYWORD,usage,REJECT'
+  - 'DOMAIN-SUFFIX,vungle.com,REJECT'
+  - 'DOMAIN-KEYWORD,wlmonitor,REJECT'
+  - 'DOMAIN-KEYWORD,zjtoolbar,REJECT'
+  - 'DOMAIN-SUFFIX,9to5mac.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,abpchina.org,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,adblockplus.org,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,adobe.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,akamaized.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,alfredapp.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,amplitude.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,ampproject.org,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,android.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,angularjs.org,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,aolcdn.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,apkpure.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,appledaily.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,appshopper.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,appspot.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,arcgis.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,archive.org,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,armorgames.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,aspnetcdn.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,att.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,awsstatic.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,azureedge.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,azurewebsites.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,bing.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,bintray.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,bit.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,bit.ly,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,bitbucket.org,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,bjango.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,bkrtx.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,blog.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,blogcdn.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,blogger.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,blogsmithmedia.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,blogspot.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,blogspot.hk,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,bloomberg.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,box.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,box.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,cachefly.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,chromium.org,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,cl.ly,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,cloudflare.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,cloudfront.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,cloudmagic.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,cmail19.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,cnet.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,cocoapods.org,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,comodoca.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,crashlytics.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,culturedcode.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,d.pr,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,danilo.to,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,dayone.me,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,db.tt,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,deskconnect.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,disq.us,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,disqus.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,disquscdn.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,dnsimple.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,docker.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,dribbble.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,droplr.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,duckduckgo.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,dueapp.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,dytt8.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,edgecastcdn.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,edgekey.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,edgesuite.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,engadget.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,entrust.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,eurekavpt.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,evernote.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,fabric.io,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,fast.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,fastly.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,fc2.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,feedburner.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,feedly.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,feedsportal.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,fiftythree.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,firebaseio.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,flexibits.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,flickr.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,flipboard.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,g.co,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,gabia.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,geni.us,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,gfx.ms,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,ggpht.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,ghostnoteapp.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,git.io,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-KEYWORD,github,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,globalsign.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,gmodules.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,godaddy.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,golang.org,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,gongm.in,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,goo.gl,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,goodreaders.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,goodreads.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,gravatar.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,gstatic.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,gvt0.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,hockeyapp.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,hotmail.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,icons8.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,ifixit.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,ift.tt,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,ifttt.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,iherb.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,imageshack.us,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,img.ly,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,imgur.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,imore.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,instapaper.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,ipn.li,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,is.gd,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,issuu.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,itgonglun.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,itun.es,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,ixquick.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,j.mp,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,js.revsci.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,jshint.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,jtvnw.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,justgetflux.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,kat.cr,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,klip.me,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,libsyn.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,linkedin.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,line-apps.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,linode.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,lithium.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,littlehj.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,live.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,live.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,livefilestore.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,llnwd.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,macid.co,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,macromedia.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,macrumors.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,mashable.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,mathjax.org,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,medium.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,mega.co.nz,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,mega.nz,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,megaupload.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,microsofttranslator.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,mindnode.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,mobile01.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,modmyi.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,msedge.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,myfontastic.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,name.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,nextmedia.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,nsstatic.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,nssurge.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,nyt.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,nytimes.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,omnigroup.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,onedrive.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,onenote.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,ooyala.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,openvpn.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,openwrt.org,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,orkut.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,osxdaily.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,outlook.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,ow.ly,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,paddleapi.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,parallels.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,parse.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,pdfexpert.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,periscope.tv,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,pinboard.in,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,pinterest.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,pixelmator.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,pixiv.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,playpcesor.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,playstation.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,playstation.com.hk,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,playstation.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,playstationnetwork.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,pushwoosh.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,rime.im,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,servebom.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,sfx.ms,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,shadowsocks.org,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,sharethis.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,shazam.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,skype.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,smartdns.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,smartmailcloud.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,sndcdn.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,sony.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,soundcloud.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,sourceforge.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,spotify.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,squarespace.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,sstatic.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,st.luluku.pw,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,stackoverflow.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,startpage.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,staticflickr.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,steamcommunity.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,symauth.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,symcb.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,symcd.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,tapbots.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,tapbots.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,tdesktop.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,techcrunch.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,techsmith.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,thepiratebay.org,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,theverge.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,time.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,timeinc.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,tiny.cc,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,tinypic.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,tmblr.co,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,todoist.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,trello.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,trustasiassl.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,tumblr.co,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,tumblr.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,tweetdeck.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,tweetmarker.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,twitch.tv,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,txmblr.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,typekit.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,ubertags.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,ublock.org,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,ubnt.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,ulyssesapp.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,urchin.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,usertrust.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,v.gd,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,v2ex.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,vimeo.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,vimeocdn.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,vine.co,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,vivaldi.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,vox-cdn.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,vsco.co,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,vultr.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,w.org,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,w3schools.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,webtype.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,wikiwand.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,wikileaks.org,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,wikimedia.org,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,wikipedia.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,wikipedia.org,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,windows.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,windows.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,wire.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,wordpress.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,workflowy.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,wp.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,wsj.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,wsj.net,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,xda-developers.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,xeeno.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,xiti.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,yahoo.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,yimg.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,ying.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,yoyo.org,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,ytimg.com,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,telegra.ph,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'DOMAIN-SUFFIX,telegram.org,🐔坤坤八卦云-IPLC专线秒开·省着用'
+  - 'IP-CIDR,91.108.4.0/22,🐔坤坤八卦云-IPLC专线秒开·省着用,no-resolve'
+  - 'IP-CIDR,91.108.8.0/21,🐔坤坤八卦云-IPLC专线秒开·省着用,no-resolve'
+  - 'IP-CIDR,91.108.16.0/22,🐔坤坤八卦云-IPLC专线秒开·省着用,no-resolve'
+  - 'IP-CIDR,91.108.56.0/22,🐔坤坤八卦云-IPLC专线秒开·省着用,no-resolve'
+  - 'IP-CIDR,149.154.160.0/20,🐔坤坤八卦云-IPLC专线秒开·省着用,no-resolve'
+  - 'IP-CIDR6,2001:67c:4e8::/48,🐔坤坤八卦云-IPLC专线秒开·省着用,no-resolve'
+  - 'IP-CIDR6,2001:b28:f23d::/48,🐔坤坤八卦云-IPLC专线秒开·省着用,no-resolve'
+  - 'IP-CIDR6,2001:b28:f23f::/48,🐔坤坤八卦云-IPLC专线秒开·省着用,no-resolve'
+  - 'IP-CIDR,120.232.181.162/32,🐔坤坤八卦云-IPLC专线秒开·省着用,no-resolve'
+  - 'IP-CIDR,120.241.147.226/32,🐔坤坤八卦云-IPLC专线秒开·省着用,no-resolve'
+  - 'IP-CIDR,120.253.253.226/32,🐔坤坤八卦云-IPLC专线秒开·省着用,no-resolve'
+  - 'IP-CIDR,120.253.255.162/32,🐔坤坤八卦云-IPLC专线秒开·省着用,no-resolve'
+  - 'IP-CIDR,120.253.255.34/32,🐔坤坤八卦云-IPLC专线秒开·省着用,no-resolve'
+  - 'IP-CIDR,120.253.255.98/32,🐔坤坤八卦云-IPLC专线秒开·省着用,no-resolve'
+  - 'IP-CIDR,180.163.150.162/32,🐔坤坤八卦云-IPLC专线秒开·省着用,no-resolve'
+  - 'IP-CIDR,180.163.150.34/32,🐔坤坤八卦云-IPLC专线秒开·省着用,no-resolve'
+  - 'IP-CIDR,180.163.151.162/32,🐔坤坤八卦云-IPLC专线秒开·省着用,no-resolve'
+  - 'IP-CIDR,180.163.151.34/32,🐔坤坤八卦云-IPLC专线秒开·省着用,no-resolve'
+  - 'IP-CIDR,203.208.39.0/24,🐔坤坤八卦云-IPLC专线秒开·省着用,no-resolve'
+  - 'IP-CIDR,203.208.40.0/24,🐔坤坤八卦云-IPLC专线秒开·省着用,no-resolve'
+  - 'IP-CIDR,203.208.41.0/24,🐔坤坤八卦云-IPLC专线秒开·省着用,no-resolve'
+  - 'IP-CIDR,203.208.43.0/24,🐔坤坤八卦云-IPLC专线秒开·省着用,no-resolve'
+  - 'IP-CIDR,203.208.50.0/24,🐔坤坤八卦云-IPLC专线秒开·省着用,no-resolve'
+  - 'IP-CIDR,220.181.174.162/32,🐔坤坤八卦云-IPLC专线秒开·省着用,no-resolve'
+  - 'IP-CIDR,220.181.174.226/32,🐔坤坤八卦云-IPLC专线秒开·省着用,no-resolve'
+  - 'IP-CIDR,220.181.174.34/32,🐔坤坤八卦云-IPLC专线秒开·省着用,no-resolve'
+  - 'DOMAIN,injections.adguard.org,DIRECT'
+  - 'DOMAIN,local.adguard.org,DIRECT'
+  - 'DOMAIN-SUFFIX,local,DIRECT'
+  - 'IP-CIDR,127.0.0.0/8,DIRECT'
+  - 'IP-CIDR,172.16.0.0/12,DIRECT'
+  - 'IP-CIDR,192.168.0.0/16,DIRECT'
+  - 'IP-CIDR,10.0.0.0/8,DIRECT'
+  - 'IP-CIDR,17.0.0.0/8,DIRECT'
+  - 'IP-CIDR,100.64.0.0/10,DIRECT'
+  - 'IP-CIDR,224.0.0.0/4,DIRECT'
+  - 'IP-CIDR6,fe80::/10,DIRECT'
+  - 'DOMAIN-SUFFIX,cn,DIRECT'
+  - 'DOMAIN-KEYWORD,-cn,DIRECT'
+  - 'GEOIP,CN,DIRECT'
+  - 'MATCH,🐔坤坤八卦云-IPLC专线秒开·省着用'
