@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数独生成器</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>数独生成器</h1>
+            <div class="controls">
+                <div class="size-selector">
+                    <label for="gridSize">选择宫格：</label>
+                    <select id="gridSize">
+                        <option value="4">4×4</option>
+                        <option value="6">6×6</option>
+                        <option value="9" selected>9×9</option>
+                    </select>
+                </div>
+                <div class="difficulty-selector">
+                    <label for="difficulty">难度：</label>
+                    <select id="difficulty">
+                        <option value="easy">简单</option>
+                        <option value="medium" selected>中等</option>
+                        <option value="hard">困难</option>
+                    </select>
+                </div>
+                <button id="generateBtn" class="btn primary">生成新题目</button>
+                <button id="toggleSolutionBtn" class="btn secondary">显示答案</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="game-area">
+                <div class="timer-container">
+                    <span class="timer">时间: <span id="timer">00:00</span></span>
+                    <span class="difficulty-display">难度: <span id="currentDifficulty">中等</span></span>
+                </div>
+                
+                <div id="sudokuGrid" class="sudoku-grid"></div>
+                
+                <div class="solution-container" id="solutionContainer" style="display: none;">
+                    <h3>答案</h3>
+                    <div id="solutionGrid" class="sudoku-grid solution"></div>
+                </div>
+            </div>
+
+            <div class="history-section">
+                <div class="history-header">
+                    <h3>历史记录</h3>
+                    <button id="clearHistoryBtn" class="btn danger">清空记录</button>
+                </div>
+                <div id="historyList" class="history-list"></div>
+            </div>
+        </main>
+
+        <!-- 移动端数字面板 -->
+        <div id="numberPanel" class="number-panel">
+            <div class="number-buttons"></div>
+            <button class="clear-btn">清除</button>
+        </div>
+
+        <!-- 成功庆祝弹窗 -->
+        <div id="successModal" class="modal">
+            <div class="modal-content">
+                <h2>🎉 恭喜完成！</h2>
+                <p>您用时 <span id="completionTime"></span></p>
+                <p>难度: <span id="completionDifficulty"></span></p>
+                <button id="closeModalBtn" class="btn primary">继续游戏</button>
+                <button id="newGameBtn" class="btn secondary">新游戏</button>
+            </div>
+        </div>
+
+        <!-- 烟花动画容器 -->
+        <div id="fireworks" class="fireworks"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

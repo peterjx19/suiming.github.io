@@ -9,16 +9,18 @@ function switchEditor(type) {
     document.getElementById(`${type}-editor`).classList.add('active');
     
     // 如果切换到Mermaid编辑器，自动渲染默认内容
-    if (type === 'mermaid') {
-        renderMermaid();
+    if (type === 'svg') {
+        renderSVG();
     }
 }
 
 // 初始化Mermaid
+
 mermaid.initialize({
-    startOnLoad: true,
-    theme: 'default',
-    securityLevel: 'loose'
+  startOnLoad: true,
+  securityLevel: 'loose',
+  startOnLoad: true,
+  theme: 'default'
 });
 
 // 标签切换功能
@@ -144,9 +146,10 @@ async function downloadMermaidPNG() {
     const img = new Image();
     
     img.onload = function() {
-        canvas.width = img.width;
-        canvas.height = img.height;
-        ctx.drawImage(img, 0, 0);
+        canvas.width = img.width * 5;
+        canvas.height = img.height * 5;
+        
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
         
         // 生成文件名
         const dateTime = getFormattedDateTime();
@@ -165,5 +168,6 @@ async function downloadMermaidPNG() {
 
 // 页面加载完成后渲染默认的Mermaid图表
 document.addEventListener('DOMContentLoaded', () => {
+    switchEditor('mermaid'); // 将 Mermaid 设置为默认编辑器
     renderMermaid();
-}); 
+});
